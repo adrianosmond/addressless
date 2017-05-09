@@ -13,16 +13,15 @@ class Home extends Component {
       const allPosts = result.val();
       let postArray = [];
       for (let post in allPosts) {
-        postArray.push(post);
-        console.log(allPosts[post]);
+        postArray.push({
+          date: post,
+          title: allPosts[post].title
+        });
       }
 
       this.setState({
         posts: postArray
       });
-
-
-      console.log(this.state.posts);
     });
   }
 
@@ -36,7 +35,7 @@ class Home extends Component {
           <ul>
             {this.state.posts.map((post) => {
               return (
-                <li key={post}><Link to={'/posts/' + post}>{post}</Link></li>
+                <li key={post}><Link to={'/posts/' + post.date}>{post.title}</Link></li>
               )
             })}
           </ul>
