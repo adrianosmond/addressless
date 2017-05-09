@@ -17,7 +17,7 @@ class Metadata extends Component {
 
   render () {
     return (
-      <p className="metadata">{this.formatDate(this.props.data.postDate)} - {this.props.data.location}</p>
+      <p className="metadata">{this.formatDate(this.props.data.date)} - {this.props.data.location}</p>
     );
   }
 }
