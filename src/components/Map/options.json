@@ -1,16 +1,11 @@
 {
   "backgroundColor": "#14141f",
-  "center": {
-    "lat": -41.911475,
-    "lng": 172.792969
-  },
   "disableDoubleClickZoom": true,
   "disableDefaultUI": true,
   "draggable": false,
   "gestureHandling": "none",
   "keyboardShortcuts": false,
   "scrollwheel": false,
-  "zoom": 6,
   "styles": [{
       "elementType": "geometry",
       "stylers": [{

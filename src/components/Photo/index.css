@@ -1,0 +1,26 @@
+.photo {
+  display: block;
+  position: relative;
+  margin: 2rem 0 0;
+  padding: 0.5rem 0;
+}
+
+.photo--with-caption {
+  padding-top: 2rem;
+}
+
+.photo__img {
+  display: block;
+  width: 100%;
+}
+
+.photo__caption {
+  margin-top: 0.5rem;
+  text-align: right;
+  font-style: italic;
+  line-height: 1;
+}
+
+.photo-caption:before {
+  content: "\2014";
+}

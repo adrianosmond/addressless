@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
-import options from './options.json';
+import GoogleMapReact from 'google-map-react';
+import mapOptions from './options.json';
+
+import './index.css';
 
 class Map extends Component {
   render () {
-    console.log(options);
     return (
-      <div>...</div>
+      <div className="map">
+        <GoogleMapReact
+          bootstrapURLKeys={{key: 'AIzaSyBukDmt04LqDkmRpbL340AWRYUyA2cHt2Y'}}
+          defaultCenter={this.props.data.center}
+          defaultZoom={this.props.data.zoom}
+          options={mapOptions}
+        ></GoogleMapReact>
+      </div>
     );
   }
 }

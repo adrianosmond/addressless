@@ -6,6 +6,8 @@ import Photo from '../Photo';
 import Quote from '../Quote';
 import Map from '../Map';
 
+import '../../assets/styles/objects/row.css';
+
 class PostSection extends Component {
   inner () {
     if (this.props.sectiontype === 'lead') {

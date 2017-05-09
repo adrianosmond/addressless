@@ -49,9 +49,44 @@
       },
       {
         "data": {
-          "text": "..."
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "type": "text"
+      },
+      {
+        "data": {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "type": "text"
+      },
+      {
+        "data": {
+          "fullWidth": true,
+          "center": {
+            "lat": 51.504362,
+            "lng": -0.126343
+          },
+          "zoom": 12
         },
         "type": "map"
+      },
+      {
+        "data": {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "type": "text"
+      },
+      {
+        "data": {
+          "text": "With the lights out, it's less dangerous. Here we are now, entertain us."
+        },
+        "type": "quote"
+      },
+      {
+        "data": {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "type": "text"
       },
       {
         "data": {
@@ -60,12 +95,6 @@
           "url": "/assets/images/img2.jpg"
         },
         "type": "photo"
-      },
-      {
-        "data": {
-          "text": "With the lights out, it's less dangerous. Here we are now, entertain us."
-        },
-        "type": "quote"
       }],
       "location": "London",
       "title": "Title goes here!"

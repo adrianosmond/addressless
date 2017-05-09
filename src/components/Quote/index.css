@@ -1,0 +1,33 @@
+.quote {
+  position: relative;
+  margin: 2rem;
+  padding-left: 2rem;
+}
+
+.quote:before {
+  content: "\201C";
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  opacity: 0.5;
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.quote:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.quote__text {
+  line-height: 1.25;
+}
+
+.quote__citation {
+  float: right;
+}
+
+.quote__citation:before {
+  content: "\2014";
+}

@@ -1,0 +1,15 @@
+.article__lead {
+  margin-top: 3rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  font-size: 1.5em;
+  line-height: 1.6666666666;
+}
+
+.article__lead:first-letter {
+  float: left;
+  font-size: 3.2em;
+  line-height: 1;
+  padding-right: 0.05em;
+}

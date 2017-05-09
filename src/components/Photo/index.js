@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './index.css';
+
 class Photo extends Component {
   caption () {
     if (this.props.data.caption) {

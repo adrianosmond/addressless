@@ -4,6 +4,9 @@ import moment from 'moment';
 
 import PostSection from '../PostSection';
 
+import './index.css';
+
+
 class Post extends Component {
   state = {
   }
@@ -12,7 +15,6 @@ class Post extends Component {
     const postDate = this.props.match.params.postDate;
 
     db.ref(`posts/${postDate}`).once("value", (result) => {
-      console.log(result.val());
       this.setState({
         postDate: postDate,
         postData: result.val()

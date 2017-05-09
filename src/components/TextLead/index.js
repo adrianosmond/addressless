@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './index.css';
+
 class TextLead extends Component {
   render () {
     return (
