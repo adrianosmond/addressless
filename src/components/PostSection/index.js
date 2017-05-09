@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import Heading from '../Heading';
 import TextLead from '../TextLead';
 import TextPara from '../TextPara';
 import Photo from '../Photo';
+import Quote from '../Quote';
+import Map from '../Map';
 
 class PostSection extends Component {
   inner () {
@@ -16,6 +19,18 @@ class PostSection extends Component {
     } else if (this.props.sectiontype === 'photo') {
       return (
         <Photo data={this.props.sectiondata} />
+      );
+    } else if (this.props.sectiontype === 'quote') {
+      return (
+        <Quote data={this.props.sectiondata} />
+      );
+    } else if (this.props.sectiontype === 'heading') {
+      return (
+        <Heading data={this.props.sectiondata} />
+      );
+    } else if (this.props.sectiontype === 'map') {
+      return (
+        <Map data={this.props.sectiondata} />
       );
     }
   }

@@ -5,9 +5,6 @@ import {
   Switch
 } from 'react-router-dom'
 
-import './assets/styles/base/reset.css';
-import './assets/styles/base/base.css';
-
 import Home from './components/Home';
 import Post from './components/Post';
 
