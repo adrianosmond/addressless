@@ -5,7 +5,7 @@ import './index.css';
 class TextLead extends Component {
   render () {
     return (
-      <p className="article__lead">{this.props.data.text}</p>
+      <p className="lead-text">{this.props.data.text}</p>
     );
   }
 }

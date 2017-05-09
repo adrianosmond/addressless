@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Heading from '../Heading';
+import Metadata from '../Metadata';
 import TextLead from '../TextLead';
 import TextPara from '../TextPara';
 import Photo from '../Photo';
@@ -33,6 +34,10 @@ class PostSection extends Component {
     } else if (this.props.sectiontype === 'map') {
       return (
         <Map data={this.props.sectiondata} />
+      );
+    } else if (this.props.sectiontype === 'metadata') {
+      return (
+        <Metadata data={this.props.sectiondata} />
       );
     }
   }
