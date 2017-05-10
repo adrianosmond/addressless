@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import db from '../../lib/db';
 
-import PostSection from '../PostSection';
+import PostSection from '../../components/PostSection';
 
 class Post extends Component {
   state = {

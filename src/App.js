@@ -5,8 +5,9 @@ import {
   Switch
 } from 'react-router-dom'
 
-import Home from './components/Home';
-import Post from './components/Post';
+import Home from './containers/Home';
+import Post from './containers/Post';
+import Editor from './containers/Editor';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/posts/:postDate" component={Post}/>
+          <Route path="/editor" component={Editor}/>
         </Switch>
       </Router>
     );

@@ -58,3 +58,7 @@ p {
 a {
   color: inherit;
 }
+
+input {
+  font: inherit;
+}
