@@ -6,7 +6,7 @@ class HeadingEditor extends Component {
       <div>
         <label>
           Level:
-          <select value={this.props.data.level}>
+          <select value={this.props.data.level} onChange={this.props.changeContents.bind(this, 'level')}>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -15,7 +15,7 @@ class HeadingEditor extends Component {
             <option>6</option>
           </select>
         </label>
-        <input type="text" className="post-section-editor__input" value={this.props.data.text} />
+        <input type="text" className="post-section-editor__input" value={this.props.data.text} onChange={this.props.changeContents.bind(this, 'text')} />
       </div>
     );
   }

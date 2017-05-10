@@ -21,14 +21,14 @@ class PostSectionEditor extends Component {
   inner (type, data) {
     const SectionTag = sectiontypes[type];
     return (
-      <SectionTag data={data} />
+      <SectionTag data={data} changeContents={this.props.changeContents} />
     );
   }
 
   render () {
     return (
       <div className="post-section-editor">
-        <select value={this.props.sectiontype}>
+        <select value={this.props.sectiontype} onChange={this.props.changeSectionType}>
           {Object.keys(sectiontypes).map((type) => {
             return (
               <option key={type} value={type}>{type}</option>

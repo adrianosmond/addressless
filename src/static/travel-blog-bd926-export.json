@@ -52,10 +52,8 @@
         "type" : "text"
       }, {
         "data" : {
-          "center" : {
-            "lat" : 51.504362,
-            "lng" : -0.126343
-          },
+          "centerlat" : 51.504362,
+          "centerlng" : -0.126343,
           "fullWidth" : true,
           "zoom" : 12
         },
