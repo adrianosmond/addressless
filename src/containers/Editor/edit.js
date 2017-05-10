@@ -46,10 +46,8 @@ class EditPost extends Component {
       };
     } else if (type === 'map') {
       return {
-        center : {
-          lat : 51.504362,
-          lng : -0.126343
-        },
+        centerlat : 51.504362,
+        centerlng : -0.126343,
         zoom : 12
       };
     }
@@ -88,13 +86,41 @@ class EditPost extends Component {
 
   changeContents(index, field, e) {
     let postData = this.state.postData;
-    postData.contents[index].data[field] = e.target.value;
+    if (typeof postData.contents[index].data[field] === 'number') {
+      postData.contents[index].data[field] = parseFloat(e.target.value);
+    } else {
+      postData.contents[index].data[field] = e.target.value;
+    }
+    this.setState({
+      postData
+    });
+  }
+
+  moveSectionUp(index) {
+    console.log('move up', index);
+    this.switchSections(index, index - 1);
+  }
+
+  moveSectionDown(index) {
+    console.log('move down', index);
+    this.switchSections(index, index + 1);
+  }
+
+  switchSections(x, y) {
+    console.log('switch', x, y);
+    let postData = this.state.postData;
+    const tmp = postData.contents[x];
+    postData.contents[x] = postData.contents[y];
+    postData.contents[y] = tmp;
     this.setState({
       postData
     });
   }
 
   savePost() {
+    db.ref(`posts/${this.state.postDate}`).set(this.state.postData).then(() => {
+      alert('Saved!');
+    });
   }
 
   deletePost() {
@@ -127,6 +153,10 @@ class EditPost extends Component {
             {this.state.postData.contents? this.state.postData.contents.map((section, idx) => {
               return (
                 <PostSectionEditor key={idx} sectiontype={section.type} sectiondata={section.data}
+                  canGoUp={idx>0}
+                  moveUp={this.moveSectionUp.bind(this, idx)}
+                  canGoDown={idx < this.state.postData.contents.length - 1}
+                  moveDown={this.moveSectionDown.bind(this, idx)}
                   changeSectionType={this.changeSectionType.bind(this, idx)}
                   changeContents={this.changeContents.bind(this, idx)} />
               );

@@ -28,13 +28,19 @@ class PostSectionEditor extends Component {
   render () {
     return (
       <div className="post-section-editor">
-        <select value={this.props.sectiontype} onChange={this.props.changeSectionType}>
-          {Object.keys(sectiontypes).map((type) => {
-            return (
-              <option key={type} value={type}>{type}</option>
-            );
-          })}
-        </select>
+        <label>
+          Section type:
+          <select value={this.props.sectiontype} onChange={this.props.changeSectionType}>
+            {Object.keys(sectiontypes).map((type) => {
+              return (
+                <option key={type} value={type}>{type}</option>
+              );
+            })}
+          </select>
+        </label>
+        <button disabled={!this.props.canGoUp} onClick={this.props.moveUp}>&uarr;</button>
+        <button disabled={!this.props.canGoDown} onClick={this.props.moveDown}>&darr;</button>
+        <button>Delete section</button>
         { this.inner(this.props.sectiontype, this.props.sectiondata) }
       </div>
     );
