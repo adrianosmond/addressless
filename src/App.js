@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 import Home from './containers/Home';
 import Post from './containers/Post';
