@@ -31,9 +31,9 @@ class ListPosts extends Component {
       <div>
         <h1>List</h1>
         <ul>
-          {this.state.posts.map((post) => {
+          {this.state.posts.map((post, idx) => {
             return (
-              <li key={post}><Link to={'/editor/' + post.date}>{post.title}</Link></li>
+              <li key={idx}><Link to={'/editor/' + post.date}>{post.title}</Link></li>
             );
           })}
         </ul>

@@ -4,12 +4,16 @@ import moment from 'moment';
 
 import db from '../../lib/db';
 
+const authors = ["Adrian", "Dina"];
+
 class NewPost extends Component {
   state = {
     day: moment().format('DD'),
     month: moment().format('MM'),
     year: moment().format('YYYY'),
-    title: ''
+    title: '',
+    location: '',
+    author: 'dina'
   }
 
   handleChange(input, e) {
@@ -22,7 +26,9 @@ class NewPost extends Component {
   createPost() {
     const date = `${this.state.year}-${this.state.month}-${this.state.day}`;
     const post = {
-      title: this.state.title
+      title: this.state.title,
+      location: this.state.location,
+      author: this.state.author
     };
     db.ref(`posts/${date}`).set(post).then(() => {
       this.setState({
@@ -47,7 +53,19 @@ class NewPost extends Component {
           <input type="text" value={this.state.year} placeholder="YYYY" name="year" maxLength="4" onChange={this.handleChange.bind(this, 'year')} />
           <p>Title</p>
           <input type="text" value={this.state.title} placeholder="Post title..." name="title" onChange={this.handleChange.bind(this, 'title')} />
-          <button onClick={this.createPost.bind(this)}>Create Post</button>
+          <p>Location</p>
+          <input type="text" value={this.state.location} placeholder="Location" name="location" onChange={this.handleChange.bind(this, 'location')} />
+          <p>Author</p>
+          <select name="author" onChange={this.handleChange.bind(this, 'author')} value={this.state.author}>
+            {authors.map((author) => {
+              return (
+                <option key={author} value={author.toLowerCase()}>{author}</option>
+              );
+            })}
+          </select>
+          <p>
+            <button onClick={this.createPost.bind(this)}>Create Post</button>
+          </p>
         </div>
       </div>
     );

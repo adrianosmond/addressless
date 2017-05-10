@@ -59,6 +59,8 @@ a {
   color: inherit;
 }
 
-input {
+input,
+textarea {
+  padding: 5px;
   font: inherit;
 }
