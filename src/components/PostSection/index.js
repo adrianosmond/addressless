@@ -20,11 +20,8 @@ const sectiontypes = {
 }
 
 class PostSection extends Component {
-  inner () {
-    const type = this.props.sectiontype;
-    const data = this.props.sectiondata;
+  inner (type, data) {
     const SectionTag = sectiontypes[type];
-
     return (
       <SectionTag data={data} />
     );
@@ -32,12 +29,12 @@ class PostSection extends Component {
 
   render () {
     if (this.props.sectiondata.fullWidth === true) {
-      return this.inner();
+      return this.inner(this.props.sectiontype, this.props.sectiondata);
     } else {
       return (
         <div className={'post-section' + ( this.props.sectiondata.color ? ' post-section--' + this.props.sectiondata.color : '' )}>
           <div className="post-section__inner">
-            { this.inner() }
+            { this.inner(this.props.sectiontype, this.props.sectiondata) }
           </div>
         </div>
       );
