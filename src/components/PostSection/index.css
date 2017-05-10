@@ -1,8 +1,8 @@
-.row--dark {
+.post-section--dark {
   background-color: rgba(0,0,0,0.3);
 }
 
-.row__inner {
+.post-section__inner {
   max-width: calc(800px + 2rem);
   padding-left: 1rem;
   padding-right: 1rem;

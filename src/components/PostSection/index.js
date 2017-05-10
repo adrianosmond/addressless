@@ -7,39 +7,27 @@ import Photo from '../Photo';
 import Quote from '../Quote';
 import Map from '../Map';
 
-import '../../assets/styles/objects/row.css';
+import './index.css';
+
+const sectiontypes = {
+  heading: Heading,
+  metadata: Metadata,
+  lead: TextLead,
+  text: TextPara,
+  photo: Photo,
+  map: Map,
+  quote: Quote,
+}
 
 class PostSection extends Component {
   inner () {
-    if (this.props.sectiontype === 'lead') {
-      return (
-        <TextLead data={this.props.sectiondata} />
-      );
-    } else if (this.props.sectiontype === 'text') {
-      return (
-        <TextPara data={this.props.sectiondata} />
-      );
-    } else if (this.props.sectiontype === 'photo') {
-      return (
-        <Photo data={this.props.sectiondata} />
-      );
-    } else if (this.props.sectiontype === 'quote') {
-      return (
-        <Quote data={this.props.sectiondata} />
-      );
-    } else if (this.props.sectiontype === 'heading') {
-      return (
-        <Heading data={this.props.sectiondata} />
-      );
-    } else if (this.props.sectiontype === 'map') {
-      return (
-        <Map data={this.props.sectiondata} />
-      );
-    } else if (this.props.sectiontype === 'metadata') {
-      return (
-        <Metadata data={this.props.sectiondata} />
-      );
-    }
+    const type = this.props.sectiontype;
+    const data = this.props.sectiondata;
+    const SectionTag = sectiontypes[type];
+
+    return (
+      <SectionTag data={data} />
+    );
   }
 
   render () {
@@ -47,8 +35,8 @@ class PostSection extends Component {
       return this.inner();
     } else {
       return (
-        <div className={'row' + ( this.props.sectiondata.color ? ' row--' + this.props.sectiondata.color : '' )}>
-          <div className="row__inner">
+        <div className={'post-section' + ( this.props.sectiondata.color ? ' post-section--' + this.props.sectiondata.color : '' )}>
+          <div className="post-section__inner">
             { this.inner() }
           </div>
         </div>
