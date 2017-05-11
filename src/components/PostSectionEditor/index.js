@@ -40,7 +40,7 @@ class PostSectionEditor extends Component {
         </label>
         <button disabled={!this.props.canGoUp} onClick={this.props.moveUp}>&uarr;</button>
         <button disabled={!this.props.canGoDown} onClick={this.props.moveDown}>&darr;</button>
-        <button>Delete section</button>
+        <button onClick={this.props.deleteSection}>Delete section</button>
         { this.inner(this.props.sectiontype, this.props.sectiondata) }
       </div>
     );

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import mapOptions from './options.json';
 
-import './index.css';
+import './index.css'; 
 
 class Map extends Component {
   render () {

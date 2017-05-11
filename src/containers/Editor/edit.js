@@ -97,21 +97,26 @@ class EditPost extends Component {
   }
 
   moveSectionUp(index) {
-    console.log('move up', index);
     this.switchSections(index, index - 1);
   }
 
   moveSectionDown(index) {
-    console.log('move down', index);
     this.switchSections(index, index + 1);
   }
 
   switchSections(x, y) {
-    console.log('switch', x, y);
     let postData = this.state.postData;
     const tmp = postData.contents[x];
     postData.contents[x] = postData.contents[y];
     postData.contents[y] = tmp;
+    this.setState({
+      postData
+    });
+  }
+
+  deleteSection(index) {
+    let postData = this.state.postData;
+    postData.contents = postData.contents.filter((el , i) => {return index !== i});
     this.setState({
       postData
     });
@@ -158,7 +163,8 @@ class EditPost extends Component {
                   canGoDown={idx < this.state.postData.contents.length - 1}
                   moveDown={this.moveSectionDown.bind(this, idx)}
                   changeSectionType={this.changeSectionType.bind(this, idx)}
-                  changeContents={this.changeContents.bind(this, idx)} />
+                  changeContents={this.changeContents.bind(this, idx)}
+                  deleteSection={this.deleteSection.bind(this, idx)} />
               );
             }) : ''}
             <p><button onClick={this.addSection.bind(this)}>Add Section</button></p>

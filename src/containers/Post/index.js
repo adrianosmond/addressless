@@ -29,11 +29,11 @@ class Post extends Component {
       <article>
         <PostSection sectiontype="metadata" sectiondata={{ date: this.state.postDate, location: this.state.postData.location}} />
         <PostSection sectiontype="heading" sectiondata={{ text: this.state.postData.title, level: 1}} />
-        {this.state.postData.contents.map((section, idx) => {
+        {this.state.postData.contents ? this.state.postData.contents.map((section, idx) => {
           return (
             <PostSection key={idx} sectiontype={section.type} sectiondata={section.data} />
           );
-        })}
+        }) : ''}
       </article>
     );
   }
