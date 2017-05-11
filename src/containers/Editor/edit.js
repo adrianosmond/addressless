@@ -122,6 +122,18 @@ class EditPost extends Component {
     });
   }
 
+  toggleFullWidth(index) {
+    let postData = this.state.postData;
+    if (postData.contents[index].data.fullWidth) {
+      delete postData.contents[index].data.fullWidth;
+    } else {
+      postData.contents[index].data.fullWidth = true;
+    }
+    this.setState({
+      postData
+    });
+  }
+
   savePost() {
     db.ref(`posts/${this.state.postDate}`).set(this.state.postData).then(() => {
       alert('Saved!');
@@ -164,6 +176,7 @@ class EditPost extends Component {
                   moveDown={this.moveSectionDown.bind(this, idx)}
                   changeSectionType={this.changeSectionType.bind(this, idx)}
                   changeContents={this.changeContents.bind(this, idx)}
+                  toggleFullWidth={this.toggleFullWidth.bind(this, idx)}
                   deleteSection={this.deleteSection.bind(this, idx)} />
               );
             }) : ''}

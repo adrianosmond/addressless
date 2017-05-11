@@ -41,6 +41,7 @@ class PostSectionEditor extends Component {
         <button disabled={!this.props.canGoUp} onClick={this.props.moveUp}>&uarr;</button>
         <button disabled={!this.props.canGoDown} onClick={this.props.moveDown}>&darr;</button>
         <button onClick={this.props.deleteSection}>Delete section</button>
+        <label><input type="checkbox" onChange={this.props.toggleFullWidth} checked={this.props.sectiondata.fullWidth || false} /> Full width</label>
         { this.inner(this.props.sectiontype, this.props.sectiondata) }
       </div>
     );
