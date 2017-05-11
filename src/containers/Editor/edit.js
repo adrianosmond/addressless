@@ -5,6 +5,7 @@ import db from '../../lib/db';
 import PostSectionEditor from '../../components/PostSectionEditor';
 
 const authors = ["Adrian", "Dina"];
+const globalSectionProps = ["fullWidth", "color"];
 
 class EditPost extends Component {
   state = {
@@ -77,8 +78,15 @@ class EditPost extends Component {
 
   changeSectionType(index, e) {
     let postData = this.state.postData;
+    const oldData = postData.contents[index].data
+    let newData = this.getEmptyObjectData(e.target.value);
+    for (const prop in oldData) {
+      if (newData[prop] || globalSectionProps.indexOf(prop) >= 0) {
+        newData[prop] = oldData[prop];
+      }
+    }
     postData.contents[index].type = e.target.value;
-    postData.contents[index].data = this.getEmptyObjectData(e.target.value);
+    postData.contents[index].data = newData;
     this.setState({
       postData
     });
