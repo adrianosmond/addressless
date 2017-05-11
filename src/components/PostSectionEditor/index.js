@@ -38,6 +38,13 @@ class PostSectionEditor extends Component {
             })}
           </select>
         </label>
+        <label>
+          Section colour:
+          <select value={this.props.sectiondata.color || 'none'} onChange={this.props.changeSectionColor}>
+            <option>none</option>
+            <option>dark</option>
+          </select>
+        </label>
         <button disabled={!this.props.canGoUp} onClick={this.props.moveUp}>&uarr;</button>
         <button disabled={!this.props.canGoDown} onClick={this.props.moveDown}>&darr;</button>
         <button onClick={this.props.deleteSection}>Delete section</button>

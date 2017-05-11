@@ -84,6 +84,19 @@ class EditPost extends Component {
     });
   }
 
+  changeSectionColor(index, e) {
+    const color = e.target.value;
+    let postData = this.state.postData;
+    if (color === 'none') {
+      delete postData.contents[index].data.color;
+    } else {
+      postData.contents[index].data.color = color;
+    }
+    this.setState({
+      postData
+    });
+  }
+
   changeContents(index, field, e) {
     let postData = this.state.postData;
     if (typeof postData.contents[index].data[field] === 'number') {
@@ -175,6 +188,7 @@ class EditPost extends Component {
                   canGoDown={idx < this.state.postData.contents.length - 1}
                   moveDown={this.moveSectionDown.bind(this, idx)}
                   changeSectionType={this.changeSectionType.bind(this, idx)}
+                  changeSectionColor={this.changeSectionColor.bind(this, idx)}
                   changeContents={this.changeContents.bind(this, idx)}
                   toggleFullWidth={this.toggleFullWidth.bind(this, idx)}
                   deleteSection={this.deleteSection.bind(this, idx)} />
