@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import HeadingEditor from '../HeadingEditor';
-import TextLeadEditor from '../TextLeadEditor';
-import TextParaEditor from '../TextParaEditor';
-import PhotoEditor from '../PhotoEditor';
-import QuoteEditor from '../QuoteEditor';
-import MapEditor from '../MapEditor';
+import HeadingEditor from '../HeadingEditor/HeadingEditor';
+import TextLeadEditor from '../TextLeadEditor/TextLeadEditor';
+import TextParaEditor from '../TextParaEditor/TextParaEditor';
+import PhotoEditor from '../PhotoEditor/PhotoEditor';
+import QuoteEditor from '../QuoteEditor/QuoteEditor';
+import MapEditor from '../MapEditor/MapEditor';
 
-import './index.css';
+import './PostSectionEditor.css';
 
 const sectiontypes = {
   heading: HeadingEditor,

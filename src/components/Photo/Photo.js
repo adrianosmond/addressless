@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './index.css';
+import './Photo.css';
 
 class Photo extends Component {
   caption () {

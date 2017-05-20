@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Heading from '../Heading';
-import Metadata from '../Metadata';
-import TextLead from '../TextLead';
-import TextPara from '../TextPara';
-import Photo from '../Photo';
-import Quote from '../Quote';
-import Map from '../Map';
+import Heading from '../Heading/Heading';
+import Metadata from '../Metadata/Metadata';
+import TextLead from '../TextLead/TextLead';
+import TextPara from '../TextPara/TextPara';
+import Photo from '../Photo/Photo';
+import Quote from '../Quote/Quote';
+import Map from '../Map/Map';
 
-import './index.css';
+import './PostSection.css';
 
 const sectiontypes = {
   heading: Heading,

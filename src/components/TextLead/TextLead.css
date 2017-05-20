@@ -1,4 +1,4 @@
-.lead-text {
+.text-lead {
   margin-top: 3rem;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
@@ -7,7 +7,7 @@
   line-height: 1.6666666666;
 }
 
-.lead-text:first-letter {
+.text-lead:first-letter {
   float: left;
   font-size: 3.2em;
   line-height: 1;

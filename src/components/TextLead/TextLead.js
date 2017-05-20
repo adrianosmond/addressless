@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import './index.css';
+import './TextLead.css';
 
 class TextLead extends Component {
   render () {
     return (
-      <p className="lead-text">{this.props.data.text}</p>
+      <p className="text-lead">{this.props.data.text}</p>
     );
   }
 }

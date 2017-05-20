@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
-import './index.css';
+import './Metadata.css';
 
 class Metadata extends Component {
   formatDate (dateStr) {

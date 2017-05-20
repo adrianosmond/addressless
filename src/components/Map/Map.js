@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import mapOptions from './options.json';
+import mapOptions from './mapOptions.json';
 
-import './index.css'; 
+import './Map.css';
 
 class Map extends Component {
   render () {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import db from '../../lib/db';
 
-import PostSectionEditor from '../../components/PostSectionEditor';
+import PostSectionEditor from '../../components/PostSectionEditor/PostSectionEditor';
 
 const authors = ["Adrian", "Dina"];
 const globalSectionProps = ["fullWidth", "color"];

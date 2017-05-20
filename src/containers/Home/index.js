@@ -27,19 +27,15 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Blog</h2>
-        </div>
-        <div>
-          <ul>
-            {this.state.posts.map((post) => {
-              return (
-                <li key={post.date}><Link to={'/posts/' + post.date}>{post.title}</Link></li>
-              )
-            })}
-          </ul>
-        </div>
+      <div>
+        <h2>Blog</h2>
+        <ul>
+          {this.state.posts.map((post) => {
+            return (
+              <li key={post.date}><Link to={'/posts/' + post.date}>{post.title}</Link></li>
+            )
+          })}
+        </ul>
       </div>
     );
   }
