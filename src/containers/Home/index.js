@@ -35,7 +35,7 @@ class Home extends Component {
           <ul>
             {this.state.posts.map((post) => {
               return (
-                <li key={post}><Link to={'/posts/' + post.date}>{post.title}</Link></li>
+                <li key={post.date}><Link to={'/posts/' + post.date}>{post.title}</Link></li>
               )
             })}
           </ul>
