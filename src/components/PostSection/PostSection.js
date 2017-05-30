@@ -6,6 +6,7 @@ import TextPara from '../TextPara/TextPara';
 import Photo from '../Photo/Photo';
 import Quote from '../Quote/Quote';
 import Map from '../Map/Map';
+import StatsList from '../StatsList/StatsList';
 
 import './PostSection.css';
 
@@ -17,6 +18,7 @@ const sectiontypes = {
   photo: Photo,
   map: Map,
   quote: Quote,
+  statslist: StatsList
 }
 
 class PostSection extends Component {

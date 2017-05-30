@@ -1,6 +1,7 @@
 {
   "posts" : {
     "2017-05-05" : {
+      "author" : "dina",
       "contents" : [ {
         "data" : {
           "text" : "This is an introductory paragraph. It uses a slightly bigger font so as to emphasise it a little."
@@ -82,8 +83,61 @@
         "type" : "photo"
       } ],
       "location" : "London",
-      "author" : "dina",
       "title" : "Title goes here!"
+    },
+    "2017-05-10" : {
+      "author" : "dina",
+      "contents" : [ {
+        "data" : {
+          "text" : "Intro paragraph. And look! It has a drop cap. This means that we want at least 3 lines of text really, to justify the extravagance. Therefore I'll add a few more words to make it so."
+        },
+        "type" : "lead"
+      }, {
+        "data" : {
+          "centerlat" : 52.139999,
+          "centerlng" : 6.223794,
+          "fullWidth" : true,
+          "zoom" : 15
+        },
+        "type" : "map"
+      }, {
+        "data" : {
+          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "type" : "text"
+      }, {
+        "data" : {
+          "alt" : "",
+          "caption" : "Dina is so great",
+          "color" : "dark",
+          "url" : "/assets/images/img1.jpg"
+        },
+        "type" : "photo"
+      }, {
+        "data" : {
+          "centerlat" : 50.926783,
+          "centerlng" : -1.424317,
+          "fullWidth" : true,
+          "zoom" : 13
+        },
+        "type" : "map"
+      } ],
+      "location" : "Highbury",
+      "title" : "Testy Test Testing"
+    },
+    "2017-05-11" : {
+      "author" : "adrian",
+      "contents" : [ {
+        "data" : {
+          "alt" : "",
+          "caption" : "",
+          "fullWidth" : true,
+          "url" : "/assets/images/img1.jpg"
+        },
+        "type" : "photo"
+      } ],
+      "location" : "Work",
+      "title" : "Test post on the 11th"
     }
   }
 }

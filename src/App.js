@@ -9,6 +9,23 @@ import Home from './containers/Home';
 import Post from './containers/Post';
 import Editor from './containers/Editor';
 
+// const AsyncHome = () => {
+//   let Component = null;
+//
+//   import('./containers/Home')
+//   .then(({ Home }) => {
+//     Component = Home;
+//     console.log("LOADED!");
+//   })
+//   .catch(err => {
+//     console.log("Home didn't load: ", err);
+//   });
+//
+//   return (
+//     Component ? Component : null
+//   );
+// }
+
 class App extends Component {
   render() {
     return (

@@ -1,0 +1,12 @@
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: dense;
+  min-height: 100vh;
+}
+
+.home-grid__title {
+  grid-column-end: span 2;
+  margin-top: 0;
+}

@@ -1,4 +1,11 @@
 .map {
+}
+
+.map--full-height {
+  height: 100%;
+}
+
+.map--article {
   margin: 2rem 0;
   height: 90vh;
 }
