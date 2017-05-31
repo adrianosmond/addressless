@@ -5,26 +5,14 @@ import {
   Switch
 } from 'react-router-dom';
 
-import Home from './containers/Home';
-import Post from './containers/Post';
-import Editor from './containers/Editor';
+// import Async from 'react-code-splitting';
 
-// const AsyncHome = () => {
-//   let Component = null;
-//
-//   import('./containers/Home')
-//   .then(({ Home }) => {
-//     Component = Home;
-//     console.log("LOADED!");
-//   })
-//   .catch(err => {
-//     console.log("Home didn't load: ", err);
-//   });
-//
-//   return (
-//     Component ? Component : null
-//   );
-// }
+import Home from './containers/Home';
+// const Home = () => <Async load={import('./containers/Home')} />
+import Post from './containers/Post';
+// const Post = () => <Async load={import('./containers/Post')} />
+import Editor from './containers/Editor';
+// const Editor = () => <Async load={import('./containers/Editor')} />
 
 class App extends Component {
   render() {
