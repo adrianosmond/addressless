@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import HeadingEditor from '../HeadingEditor/HeadingEditor';
-import TextLeadEditor from '../TextLeadEditor/TextLeadEditor';
-import TextParaEditor from '../TextParaEditor/TextParaEditor';
-import PhotoEditor from '../PhotoEditor/PhotoEditor';
-import QuoteEditor from '../QuoteEditor/QuoteEditor';
-import MapEditor from '../MapEditor/MapEditor';
+import HeadingEditor from '../../views/HeadingEditor/HeadingEditor';
+import TextLeadEditor from '../../views/TextLeadEditor/TextLeadEditor';
+import TextParaEditor from '../../views/TextParaEditor/TextParaEditor';
+import PhotoEditor from '../../views/PhotoEditor/PhotoEditor';
+import QuoteEditor from '../../views/QuoteEditor/QuoteEditor';
+import MapEditor from '../../views/MapEditor/MapEditor';
 
 import './PostSectionEditor.css';
 

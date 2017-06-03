@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Heading from '../Heading/Heading';
-import TextLead from '../TextLead/TextLead';
-import TextPara from '../TextPara/TextPara';
+import Heading from '../../views/Heading/Heading';
+import TextLead from '../../views/TextLead/TextLead';
+import TextPara from '../../views/TextPara/TextPara';
 import Photo from '../Photo/Photo';
-import Quote from '../Quote/Quote';
+import Quote from '../../views/Quote/Quote';
 import Map from '../Map/Map';
 import StatsList from '../StatsList/StatsList';
 import Metadata from '../../views/Metadata/Metadata';

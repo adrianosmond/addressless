@@ -18,7 +18,6 @@ class LatestPost extends Component {
         date: postDate,
         post: data[postDate]
       });
-      console.log(data[postDate])
     });
   }
 
