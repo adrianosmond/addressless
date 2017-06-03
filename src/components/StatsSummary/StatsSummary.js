@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-
-import "./StatsSummary.css";
+import { Link } from 'react-router-dom';
 
 class StatsSummary extends Component {
-  // addCommasToNumber (number) {
-  //   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  // }
-
   render () {
     return (
-      <div className="preview preview--stats">STATS</div>
+      <div className="home-grid__item home-grid__item--stats">
+        <div className="home-grid__heading">
+          <h2 className="home-grid__subtitle">Trip Stats</h2>
+          <Link className="home-grid__more-link" to="/stats">View full stats</Link>
+        </div>
+      </div>
     );
   }
 }

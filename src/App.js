@@ -7,12 +7,12 @@ import {
 
 // import Async from 'react-code-splitting';
 
-import Home from './containers/Home';
-// const Home = () => <Async load={import('./containers/Home')} />
-import Post from './containers/Post';
-// const Post = () => <Async load={import('./containers/Post')} />
-import Editor from './containers/Editor';
-// const Editor = () => <Async load={import('./containers/Editor')} />
+import Home from './containers/Home/Home';
+// const Home = () => <Async load={import('./containers/Home/Home')} />
+import Post from './containers/Post/Post';
+// const Post = () => <Async load={import('./containers/Post/Post')} />
+import Editor from './containers/Editor/Editor';
+// const Editor = () => <Async load={import('./containers/Editor/Editor')} />
 
 class App extends Component {
   render() {

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Heading from '../Heading/Heading';
-import Metadata from '../Metadata/Metadata';
 import TextLead from '../TextLead/TextLead';
 import TextPara from '../TextPara/TextPara';
 import Photo from '../Photo/Photo';
 import Quote from '../Quote/Quote';
 import Map from '../Map/Map';
 import StatsList from '../StatsList/StatsList';
+import Metadata from '../../views/Metadata/Metadata';
 
 import './PostSection.css';
 

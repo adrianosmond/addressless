@@ -13,11 +13,11 @@ class Home extends Component {
   render() {
     return (
       <div className="home-grid">
-        <h1 className="home-grid__title">Adrian &amp; Dina<br/> in New Zealand</h1>
+        <h1 className="home-grid__item--title">Adrian &amp; Dina<br/> in New Zealand</h1>
         <LatestPost />
         <LatestPhoto />
-        <TripMap />
         <StatsSummary />
+        <TripMap />
       </div>
     );
   }

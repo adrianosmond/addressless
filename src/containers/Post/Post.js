@@ -3,6 +3,8 @@ import db from '../../lib/db';
 
 import PostSection from '../../components/PostSection/PostSection';
 
+import './Post.css';
+
 class Post extends Component {
   state = {
   }
@@ -26,7 +28,7 @@ class Post extends Component {
     }
 
     return (
-      <article>
+      <article className="post">
         <PostSection sectiontype="metadata" sectiondata={{ date: this.state.postDate, location: this.state.postData.location}} />
         <PostSection sectiontype="heading" sectiondata={{ text: this.state.postData.title, level: 1}} />
         {this.state.postData.contents ? this.state.postData.contents.map((section, idx) => {

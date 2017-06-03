@@ -1,7 +1,0 @@
-.preview--map {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  grid-column-start: 3;
-  grid-column-end: span 2;
-  grid-row-start: 1;
-  grid-row-end: span 3;
-}

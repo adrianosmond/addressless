@@ -4,9 +4,9 @@ import {
   Switch
 } from 'react-router-dom';
 
-import ListPosts from './list.js';
-import NewPost from './new.js';
-import EditPost from './edit.js';
+import ListPosts from './EditorList.js';
+import NewPost from './EditorNew.js';
+import EditPost from './EditorEdit.js';
 
 class Editor extends Component {
   render() {

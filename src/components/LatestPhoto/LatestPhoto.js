@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import db from '../../lib/db';
-// import { Link } from 'react-router-dom';
-
-import "./LatestPhoto.css";
+import { Link } from 'react-router-dom';
 
 class LatestPhoto extends Component {
   state = {
@@ -24,7 +22,11 @@ class LatestPhoto extends Component {
       return null;
     }
     return (
-      <div className="preview preview--photo" style={{backgroundImage: `url('${this.state.photo.url}')`}}>
+      <div className="home-grid__item home-grid__item--photo">
+        <div className="home-grid__heading">
+          <h2 className="home-grid__subtitle">Latest Photos</h2>
+          <Link className="home-grid__more-link" to="/stats">View all photos</Link>
+        </div>
       </div>
     );
   }

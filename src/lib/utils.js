@@ -12,4 +12,6 @@ const formatDate = (dateStr) => {
   );
 };
 
-export default formatDate;
+const addCommasToNumber = (number) => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+export { formatDate, addCommasToNumber };

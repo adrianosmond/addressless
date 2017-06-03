@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import Map from "../Map/Map";
 
-import "./TripMap.css";
-
 class TripMap extends Component {
   render () {
     return (
-      <div className="preview preview--map">
+      <div className="home-grid__item home-grid__item--map">
         <Map data={{
           mapType: 'full-height',
           bounds: {

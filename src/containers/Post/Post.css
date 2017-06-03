@@ -1,0 +1,27 @@
+.post {
+  /*padding-bottom: 1rem;*/
+}
+
+.post .metadata {
+  margin-top: 3rem;
+  margin-bottom: -2rem;
+}
+
+.post p {
+  margin-top: 2rem;
+}
+
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6,
+.post .h1,
+.post .h2,
+.post .h3,
+.post .h4,
+.post .h5,
+.post .h6 {
+  margin-top: 3rem;
+}
