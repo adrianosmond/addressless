@@ -1,5 +1,5 @@
 import React from 'react';
-import Map from "../Map/Map";
+import Map from "../../components/Map/Map";
 
 const TripMap = () => (
   <div className="home-grid__item home-grid__item--map">

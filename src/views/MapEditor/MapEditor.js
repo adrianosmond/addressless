@@ -1,18 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const MapEditor = (props) => (
   <div>
     <label>
-      Latitude:
-      <input type="text" className="post-section-editor__input" value={this.props.data.centerlat} onChange={this.props.changeContents.bind(this, 'centerlat')} />
+      NW Latitude:
+      <input type="text" className="post-section-editor__input" value={props.data.nwlat} onChange={props.changeContents.bind(this, 'nwlat')} />
     </label>
     <label>
-      Longitude:
-      <input type="text" className="post-section-editor__input" value={this.props.data.centerlng} onChange={this.props.changeContents.bind(this, 'centerlng')} />
+      NW Longitude:
+      <input type="text" className="post-section-editor__input" value={props.data.nwlng} onChange={props.changeContents.bind(this, 'nwlng')} />
     </label>
     <label>
-      Zoom
-      <input type="text" className="post-section-editor__input" value={this.props.data.zoom} onChange={this.props.changeContents.bind(this, 'zoom')} />
+      SE Latitude:
+      <input type="text" className="post-section-editor__input" value={props.data.nwlat} onChange={props.changeContents.bind(this, 'selat')} />
+    </label>
+    <label>
+      SE Longitude:
+      <input type="text" className="post-section-editor__input" value={props.data.nwlng} onChange={props.changeContents.bind(this, 'selng')} />
     </label>
   </div>
 );

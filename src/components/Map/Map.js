@@ -28,7 +28,18 @@ class Map extends Component {
       height: this.container.clientHeight
     };
 
-    const {center, zoom} = fitBounds(this.props.data.bounds, size);
+    const bounds = {
+      nw: {
+        lat: this.props.data.nwlat,
+        lng: this.props.data.nwlng,
+      },
+      se: {
+        lat: this.props.data.selat,
+        lng: this.props.data.selng,
+      }
+    }
+
+    const {center, zoom} = fitBounds(bounds, size);
     this.setState({
       center,
       zoom
@@ -40,8 +51,7 @@ class Map extends Component {
       <div className={`map map--${this.props.data.mapType}`} ref={(el) => {this.container = el;}}>
         <GoogleMapReact
           bootstrapURLKeys={{key: 'AIzaSyBukDmt04LqDkmRpbL340AWRYUyA2cHt2Y'}}
-          defaultCenter={{lat: -40.9006, lng: 172.8860}}
-          center={this.state.center.lat ? this.state.center : null}
+          center={this.state.center.lat ? this.state.center : {lat: -40.9006, lng: 172.8860}}
           defaultZoom={5}
           zoom={this.state.zoom > 0 ? this.state.zoom : null}
           onChange={this.calculateCenterAndZoom.bind(this)}

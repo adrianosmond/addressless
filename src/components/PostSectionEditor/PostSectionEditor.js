@@ -20,6 +20,7 @@ const sectiontypes = {
 class PostSectionEditor extends Component {
   inner (type, data) {
     const SectionTag = sectiontypes[type];
+    console.log("DATA", data);
     return (
       <SectionTag data={data} changeContents={this.props.changeContents} />
     );

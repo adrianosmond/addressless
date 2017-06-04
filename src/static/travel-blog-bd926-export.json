@@ -1,6 +1,18 @@
 {
+  "photos" : {
+    "2017-05-08" : {
+      "caption" : "Cwm Idawl, Snowdonia",
+      "title" : "Cwm Idwal",
+      "url" : "/assets/images/img1.jpg"
+    },
+    "2017-05-11" : {
+      "caption" : "Victoria Park, London. Taken during a sunrise run.",
+      "title" : "Victoria Park",
+      "url" : "/assets/images/img2.jpg"
+    }
+  },
   "posts" : {
-    "2017-05-05" : {
+    "2017-05-10" : {
       "author" : "dina",
       "contents" : [ {
         "data" : {
@@ -9,12 +21,7 @@
         "type" : "lead"
       }, {
         "data" : {
-          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        "type" : "text"
-      }, {
-        "data" : {
-          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         "type" : "text"
       }, {
@@ -27,12 +34,7 @@
         "type" : "photo"
       }, {
         "data" : {
-          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        "type" : "text"
-      }, {
-        "data" : {
-          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         "type" : "text"
       }, {
@@ -43,20 +45,17 @@
         "type" : "heading"
       }, {
         "data" : {
-          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         "type" : "text"
       }, {
         "data" : {
-          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        "type" : "text"
-      }, {
-        "data" : {
-          "centerlat" : 51.504362,
-          "centerlng" : -0.126343,
           "fullWidth" : true,
-          "zoom" : 12
+          "mapType" : "article",
+          "nwlat" : -33.598607,
+          "nwlng" : 165.322266,
+          "selat" : -47.829752,
+          "selng" : 179.384766
         },
         "type" : "map"
       }, {
@@ -84,60 +83,50 @@
       } ],
       "location" : "London",
       "title" : "Title goes here!"
+    }
+  },
+  "stats" : {
+    "2017-05-05" : {
+      "distancedriven" : 0,
+      "distancewalked" : 10.1,
+      "photos" : 0,
+      "steps" : 8945
+    },
+    "2017-05-06" : {
+      "distancedriven" : 0,
+      "distancewalked" : 20.4,
+      "photos" : 24,
+      "steps" : 17038
+    },
+    "2017-05-07" : {
+      "distancedriven" : 0,
+      "distancewalked" : 15.6,
+      "photos" : 47,
+      "steps" : 13959
+    },
+    "2017-05-08" : {
+      "distancedriven" : 127.9,
+      "distancewalked" : 3.2,
+      "photos" : 0,
+      "steps" : 2730
+    },
+    "2017-05-09" : {
+      "distancedriven" : 0,
+      "distancewalked" : 11.3,
+      "photos" : 17,
+      "steps" : 9274
     },
     "2017-05-10" : {
-      "author" : "dina",
-      "contents" : [ {
-        "data" : {
-          "text" : "Intro paragraph. And look! It has a drop cap. This means that we want at least 3 lines of text really, to justify the extravagance. Therefore I'll add a few more words to make it so."
-        },
-        "type" : "lead"
-      }, {
-        "data" : {
-          "centerlat" : 52.139999,
-          "centerlng" : 6.223794,
-          "fullWidth" : true,
-          "zoom" : 15
-        },
-        "type" : "map"
-      }, {
-        "data" : {
-          "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        "type" : "text"
-      }, {
-        "data" : {
-          "alt" : "",
-          "caption" : "Dina is so great",
-          "color" : "dark",
-          "url" : "/assets/images/img1.jpg"
-        },
-        "type" : "photo"
-      }, {
-        "data" : {
-          "centerlat" : 50.926783,
-          "centerlng" : -1.424317,
-          "fullWidth" : true,
-          "zoom" : 13
-        },
-        "type" : "map"
-      } ],
-      "location" : "Highbury",
-      "title" : "Testy Test Testing"
+      "distancedriven" : 0,
+      "distancewalked" : 11.3,
+      "photos" : 82,
+      "steps" : 9274
     },
     "2017-05-11" : {
-      "author" : "adrian",
-      "contents" : [ {
-        "data" : {
-          "alt" : "",
-          "caption" : "",
-          "fullWidth" : true,
-          "url" : "/assets/images/img1.jpg"
-        },
-        "type" : "photo"
-      } ],
-      "location" : "Work",
-      "title" : "Test post on the 11th"
+      "distancedriven" : 273.1,
+      "distancewalked" : 4.8,
+      "photos" : 0,
+      "steps" : 3957
     }
   }
 }
