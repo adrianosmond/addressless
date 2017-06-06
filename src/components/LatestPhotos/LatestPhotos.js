@@ -22,7 +22,6 @@ class LatestPhotos extends Component {
     if (Object.keys(this.state.data).length === 0) {
       return null;
     }
-    console.log(this.state.data);
     return (
       <div className="home-grid__item home-grid__item--photos">
         <div className="home-grid__heading">
@@ -30,11 +29,10 @@ class LatestPhotos extends Component {
           <Link className="home-grid__more-link" to="/photos">View all photos</Link>
         </div>
         <div className="latest-photos-grid">
-          {Object.keys(this.state.data).map((photoDate) => {
-            const photo = this.state.data[photoDate];
-            console.log(photo);
+          {Object.keys(this.state.data).reverse().map((id) => {
+            const photo = this.state.data[id];
             return (
-              <div key={photoDate} className="latest-photos-grid__item" style={{backgroundImage: `url(${photo.url})`}}></div>
+              <div key={id} className="latest-photos-grid__item" style={{backgroundImage: `url(${photo.url})`}}></div>
             );
           })}
         </div>
