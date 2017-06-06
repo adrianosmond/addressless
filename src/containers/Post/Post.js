@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import db from '../../lib/db';
+import { database as db } from '../../lib/firebase';
 
 import PostSection from '../../components/PostSection/PostSection';
 

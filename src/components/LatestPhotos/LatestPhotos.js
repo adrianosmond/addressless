@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import db from '../../lib/db';
+import { database as db } from '../../lib/firebase';
 import { Link } from 'react-router-dom';
 
 import './LatestPhotos.css';
@@ -27,7 +27,7 @@ class LatestPhotos extends Component {
       <div className="home-grid__item home-grid__item--photos">
         <div className="home-grid__heading">
           <h2 className="home-grid__subtitle">Latest Photos</h2>
-          <Link className="home-grid__more-link" to="/stats">View all photos</Link>
+          <Link className="home-grid__more-link" to="/photos">View all photos</Link>
         </div>
         <div className="latest-photos-grid">
           {Object.keys(this.state.data).map((photoDate) => {

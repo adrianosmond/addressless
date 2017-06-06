@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import db from '../../lib/db';
+import { database as db } from '../../lib/firebase';
 
 import PostSectionEditor from '../../components/PostSectionEditor/PostSectionEditor';
 

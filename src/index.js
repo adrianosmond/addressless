@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 // eslint-disable-next-line
-import db from './lib/db';
+import {database as db} from './lib/firebase';
 // eslint-disable-next-line
 import moment from 'moment';
 

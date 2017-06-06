@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import db from '../../lib/db';
+import { database as db } from '../../lib/firebase';
 import { Link } from 'react-router-dom';
 
 import PostPreview from '../../views/PostPreview/PostPreview';

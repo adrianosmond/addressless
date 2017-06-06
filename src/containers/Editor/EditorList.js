@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import db from '../../lib/db';
+import { database as db } from '../../lib/firebase';
 
 class ListPosts extends Component {
   state = {
