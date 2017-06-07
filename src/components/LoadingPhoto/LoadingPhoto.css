@@ -21,6 +21,14 @@
   animation: spin 1s linear infinite;
 }
 
+.loading-photo--loaded {
+  background-color: none;
+}
+
+.loading-photo--loaded:after {
+  content: none;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

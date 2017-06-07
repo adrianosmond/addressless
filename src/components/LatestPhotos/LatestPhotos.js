@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { database as db } from '../../lib/firebase';
 import { urlSafeString } from '../../lib/utils';
 
-import LoadingPhoto from '../../views/LoadingPhoto/LoadingPhoto';
+import LoadingPhoto from '../../components/LoadingPhoto/LoadingPhoto';
 
 import './LatestPhotos.css';
 
@@ -45,7 +45,9 @@ class LatestPhotos extends Component {
             {Object.keys(this.state.data).reverse().map((id) => {
               const photo = this.state.data[id];
               return (
-                <Link to={`photos/${urlSafeString(photo.title)}/${id}`} key={id} className="latest-photos-grid__item" style={{backgroundImage: `url(${photo.url})`}}></Link>
+                <Link to={`photos/${urlSafeString(photo.title)}/${id}`} key={id} className="latest-photos-grid__item">
+                  <LoadingPhoto img={`${photo.url}`} />
+                </Link>
               );
             })}
           </div>}
