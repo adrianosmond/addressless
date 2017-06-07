@@ -19,23 +19,23 @@ class LatestPhotos extends Component {
   }
 
   render () {
-    if (Object.keys(this.state.data).length === 0) {
-      return null;
-    }
+
     return (
       <div className="home-grid__item home-grid__item--photos">
         <div className="home-grid__heading">
           <h2 className="home-grid__subtitle">Latest Photos</h2>
           <Link className="home-grid__more-link" to="/photos">View all photos</Link>
         </div>
-        <div className="latest-photos-grid">
-          {Object.keys(this.state.data).reverse().map((id) => {
-            const photo = this.state.data[id];
-            return (
-              <div key={id} className="latest-photos-grid__item" style={{backgroundImage: `url(${photo.url})`}}></div>
-            );
-          })}
-        </div>
+        {Object.keys(this.state.data).length === 0 ?
+          null :
+          <div className="latest-photos-grid">
+            {Object.keys(this.state.data).reverse().map((id) => {
+              const photo = this.state.data[id];
+              return (
+                <div key={id} className="latest-photos-grid__item" style={{backgroundImage: `url(${photo.url})`}}></div>
+              );
+            })}
+          </div>}
       </div>
     );
   }

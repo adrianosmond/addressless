@@ -22,16 +22,13 @@ class LatestPost extends Component {
   }
 
   render () {
-    if (this.state.date === "") {
-      return null;
-    }
     return (
       <div className="home-grid__item home-grid__item--post">
         <div className="home-grid__heading">
           <h2 className="home-grid__subtitle">Latest Post</h2>
           <Link className="home-grid__more-link" to="/posts/list">View all posts</Link>
         </div>
-        <PostPreview data={this.state.post} date={this.state.date} />
+        {this.state.date === "" ? null : <PostPreview data={this.state.post} date={this.state.date} />}
       </div>
     );
   }
