@@ -1,0 +1,31 @@
+.loading-photo {
+  position: relative;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.loading-photo:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+  border-radius: 50%;
+  border-top: 5px solid #14141f;
+  border-right: 5px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.3);
+  border-left: 5px solid rgba(255, 255, 255, 0.3);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

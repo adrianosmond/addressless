@@ -14,7 +14,7 @@ class Photos extends Component {
       <Switch>
         <Route exact path='/photos' component={ListPhotos} />
         <Route path='/photos/new' component={NewPhoto} />
-        <Route path='/photos/:postDate' component={SinglePhoto} />
+        <Route path='/photos/:photoTitle/:photoId' component={SinglePhoto} />
       </Switch>
     );
   }

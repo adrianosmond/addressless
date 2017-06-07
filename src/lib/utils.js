@@ -1,6 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 
+const addCommasToNumber = (number) => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 const formatDate = (dateStr) => {
   const date = moment(dateStr)
   return (
@@ -12,6 +14,6 @@ const formatDate = (dateStr) => {
   );
 };
 
-const addCommasToNumber = (number) => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+const urlSafeString = (string) => string.toLowerCase().replace(/[^a-z]/g, '-').replace(/--/g, '-');
 
-export { formatDate, addCommasToNumber };
+export { addCommasToNumber, formatDate, urlSafeString };

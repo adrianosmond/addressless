@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { database as db } from '../../lib/firebase';
 import { Link } from 'react-router-dom';
+
+import { database as db } from '../../lib/firebase';
+import { urlSafeString } from '../../lib/utils';
+
+import LoadingPhoto from '../../views/LoadingPhoto/LoadingPhoto';
 
 import './LatestPhotos.css';
 
@@ -19,7 +23,6 @@ class LatestPhotos extends Component {
   }
 
   render () {
-
     return (
       <div className="home-grid__item home-grid__item--photos">
         <div className="home-grid__heading">
@@ -27,12 +30,22 @@ class LatestPhotos extends Component {
           <Link className="home-grid__more-link" to="/photos">View all photos</Link>
         </div>
         {Object.keys(this.state.data).length === 0 ?
-          null :
+          <div className="latest-photos-grid">
+            <div className="latest-photos-grid__item">
+              <LoadingPhoto />
+            </div>
+            <div className="latest-photos-grid__item">
+              <LoadingPhoto />
+            </div>
+            <div className="latest-photos-grid__item">
+              <LoadingPhoto />
+            </div>
+          </div> :
           <div className="latest-photos-grid">
             {Object.keys(this.state.data).reverse().map((id) => {
               const photo = this.state.data[id];
               return (
-                <div key={id} className="latest-photos-grid__item" style={{backgroundImage: `url(${photo.url})`}}></div>
+                <Link to={`photos/${urlSafeString(photo.title)}/${id}`} key={id} className="latest-photos-grid__item" style={{backgroundImage: `url(${photo.url})`}}></Link>
               );
             })}
           </div>}

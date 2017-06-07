@@ -4,7 +4,7 @@ class SinglePhoto extends Component {
   render() {
     return (
       <div>
-        Single photos
+        Single photos {this.props.match.params.photoId}
       </div>
     );
   }
