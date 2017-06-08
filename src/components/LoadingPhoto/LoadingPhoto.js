@@ -8,9 +8,10 @@ class LoadingPhoto extends Component {
   }
 
   componentWillMount () {
-    if (this.props.img) {
-      console.log(this.props.img);
+    if (!this.props.img) {
+      return;
     }
+
     const img = new Image();
     img.onload = () => {
       this.setState({
@@ -21,11 +22,9 @@ class LoadingPhoto extends Component {
   }
 
   render () {
-    if (this.state.imgLoaded) {
-      return <div className="loading-photo loading-photo--loaded" style={{backgroundImage: `url(${this.props.img})`, backgroundSize: 'cover'}}></div>
-    }
     return (
-      <div className="loading-photo"></div>
+      <div className={this.state.imgLoaded ? 'loading-photo loading-photo--loaded' : 'loading-photo'}
+          style={ (this.state.imgLoaded && this.props.img) ? {backgroundImage: `url(${this.props.img})`} : {} }></div>
     );
   }
 };
