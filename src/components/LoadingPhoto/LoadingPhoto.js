@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 
 import './LoadingPhoto.css';
 
+
 class LoadingPhoto extends Component {
   state = {
     imgLoaded: false
+  }
+
+  constructor () {
+    super();
+
+    this.imgObj = new Image();
   }
 
   componentWillMount () {
@@ -12,13 +19,20 @@ class LoadingPhoto extends Component {
       return;
     }
 
-    const img = new Image();
-    img.onload = () => {
-      this.setState({
-        imgLoaded: true
-      })
-    }
-    img.src = this.props.img;
+    this.boundLoadListener = this.imgLoadListener.bind(this);
+
+    this.imgObj.addEventListener('load', this.boundLoadListener);
+    this.imgObj.src = this.props.img;
+  }
+
+  componentWillUnmount () {
+    this.imgObj.removeEventListener('load', this.boundLoadListener);
+  }
+
+  imgLoadListener() {
+    this.setState({
+      imgLoaded: true
+    });
   }
 
   render () {

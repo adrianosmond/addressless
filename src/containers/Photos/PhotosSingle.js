@@ -10,13 +10,13 @@ class SinglePhoto extends Component {
   }
   componentWillMount() {
     db.ref(`photos/${this.props.match.params.photoId}`).once("value", (result) => {
-      console.log(result.val());
+      // console.log(result.val());
       this.setState(result.val());
     })
   }
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
 
     if (this.state.title === '') {
       return null;
