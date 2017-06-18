@@ -16,7 +16,7 @@ class LatestPhotos extends Component {
   }
 
   placeholderGrid() {
-    console.log("RENDERED PLACEHOLDERS");
+    // console.log("RENDERED PLACEHOLDERS");
     return (
       <div className="latest-photos-grid">
         <div className="latest-photos-grid__item">

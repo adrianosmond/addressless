@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { database as db } from '../../lib/firebase';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { loadLatestPost } from '../../actions/latestPost';
 
 import PostPreview from '../../views/PostPreview/PostPreview';
 
@@ -11,14 +12,13 @@ class LatestPost extends Component {
   }
 
   componentWillMount() {
-    db.ref("posts").limitToLast(1).once("value", (result) => {
-      const data = result.val()
-      const postDate = Object.keys(data)[0];
-      this.setState({
-        date: postDate,
-        post: data[postDate]
-      });
-    });
+    this.props.loadPost()
+    // const data = result.val()
+    // const postDate = Object.keys(data)[0];
+    // this.setState({
+    //   date: postDate,
+    //   post: data[postDate]
+    // });
   }
 
   render () {
@@ -28,10 +28,23 @@ class LatestPost extends Component {
           <h2 className="home-grid__subtitle">Latest Post</h2>
           <Link className="home-grid__more-link" to="/posts/list">View all posts</Link>
         </div>
-        {this.state.date === "" ? null : <PostPreview data={this.state.post} date={this.state.date} />}
+        {this.props.date === "" ? null : <PostPreview data={this.props.post} date={this.props.post.date} />}
       </div>
     );
   }
 }
 
-export default LatestPost;
+const mapStateToProps = (state) => {
+  return {
+    post: state.latestPost,
+    isLoading: state.latestPostIsLoading
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loadPost: () => dispatch(loadLatestPost())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LatestPost);
