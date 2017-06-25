@@ -3,6 +3,12 @@ html {
   box-sizing: border-box;
 }
 
+/*@media (min-width: 1500px) {
+  html {
+    font-size: 20px;
+  }
+}*/
+
 *,
 *:before,
 *:after {

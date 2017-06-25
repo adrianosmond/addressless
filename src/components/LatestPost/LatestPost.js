@@ -6,19 +6,8 @@ import { loadLatestPost } from '../../actions/latestPost';
 import PostPreview from '../../views/PostPreview/PostPreview';
 
 class LatestPost extends Component {
-  state = {
-    date: "",
-    post: {}
-  }
-
   componentWillMount() {
-    this.props.loadPost()
-    // const data = result.val()
-    // const postDate = Object.keys(data)[0];
-    // this.setState({
-    //   date: postDate,
-    //   post: data[postDate]
-    // });
+    this.props.loadPost();
   }
 
   render () {

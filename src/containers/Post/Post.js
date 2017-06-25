@@ -42,7 +42,7 @@ class Post extends Component {
             <PostSection key={idx} sectiontype={section.type} sectiondata={section.data} />
           );
         }) : ''}
-        <PostSection sectiontype="statslist" sectiondata={{fullWidth: true}} />
+        {/* <PostSection sectiontype="statslist" sectiondata={{fullWidth: true}} /> */}
       </article>
     );
   }

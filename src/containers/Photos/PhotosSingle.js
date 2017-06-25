@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {database as db} from '../../lib/firebase';
 
-import Heading from '../../views/Heading/Heading';
 import Photo from '../../components/Photo/Photo';
 
 class SinglePhoto extends Component {
@@ -23,17 +22,7 @@ class SinglePhoto extends Component {
     }
 
     return (
-      <article className="post">
-        <div className="post-section">
-          <div className="post-section__inner">
-            <Heading data={{level: 1, text: this.state.title}} />
-          </div>
-        </div>
-
-        <div className="post-section">
-          <Photo data={this.state} />
-        </div>
-      </article>
+      <Photo data={this.state} nocaption={true} nomargin={true} />
     );
   }
 }
