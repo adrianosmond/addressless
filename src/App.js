@@ -22,7 +22,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route path='/posts/:postDate' component={Post}/>
+          <Route path='/posts' component={Post}/>
           <Route path='/photos' component={Photos}/>
           <Route path='/editor' component={Editor}/>
         </Switch>

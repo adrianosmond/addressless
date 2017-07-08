@@ -16,32 +16,41 @@ export function tripStats(stats) {
 }
 
 function processStats (dataObj) {
-  let returnObj = {
+  let processedObj = {
     keys: [],
-    data: []
+    data: [],
+    timeExtent: [undefined, undefined]
   }
 
-  Object.keys(dataObj).forEach((dateStr) => {
+  const dateKeys = Object.keys(dataObj);
+
+  dateKeys.forEach((dateStr, idx) => {
     const date = moment(dateStr).toDate();
+    if (idx === 0) {
+      processedObj.timeExtent[0] = date;
+    }
+    if (idx === dateKeys.length - 1) {
+      processedObj.timeExtent[1] = date;
+    }
     const dateObj = dataObj[dateStr];
 
     Object.keys(dateObj).forEach((statKey) => {
       const val = dateObj[statKey]
 
-      let keyPos = returnObj.keys.indexOf(statKey);
+      let keyPos = processedObj.keys.indexOf(statKey);
       if (keyPos < 0) {
-        keyPos = returnObj.keys.push(statKey) - 1;
-        returnObj.data[keyPos] = [];
+        keyPos = processedObj.keys.push(statKey) - 1;
+        processedObj.data[keyPos] = [];
       }
 
-      returnObj.data[keyPos].push({
+      processedObj.data[keyPos].push({
         val,
         date
       });
     });
   });
 
-  return returnObj;
+  return processedObj;
 }
 
 export function loadStats() {

@@ -6,7 +6,7 @@ import { database as db } from '../../lib/firebase';
 
 const authors = ["Adrian", "Dina"];
 
-class NewPost extends Component {
+class EditorNew extends Component {
   state = {
     day: moment().format('DD'),
     month: moment().format('MM'),
@@ -46,7 +46,7 @@ class NewPost extends Component {
 
     return (
       <div className="post-section">
-        <div className="post-section__inner">
+        <div className="container">
           <p>Date</p>
           <input type="text" value={this.state.day} placeholder="DD" name="day" maxLength="2" onChange={this.handleChange.bind(this, 'day')} />
           <input type="text" value={this.state.month} placeholder="MM" name="month" maxLength="2" onChange={this.handleChange.bind(this, 'month')} />
@@ -72,4 +72,4 @@ class NewPost extends Component {
   }
 }
 
-export default NewPost;
+export default EditorNew;

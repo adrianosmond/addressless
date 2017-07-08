@@ -4,17 +4,17 @@ import {
   Switch
 } from 'react-router-dom';
 
-import ListPosts from './EditorList.js';
-import NewPost from './EditorNew.js';
-import EditPost from './EditorEdit.js';
+import EditorList from './EditorList.js';
+import EditorNew from './EditorNew.js';
+import EditorEdit from './EditorEdit.js';
 
 class Editor extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/editor' component={ListPosts} />
-        <Route path='/editor/new' component={NewPost} />
-        <Route path='/editor/:postDate' component={EditPost} />
+        <Route exact path='/editor' component={EditorList} />
+        <Route path='/editor/new' component={EditorNew} />
+        <Route path='/editor/:postDate' component={EditorEdit} />
       </Switch>
     );
   }

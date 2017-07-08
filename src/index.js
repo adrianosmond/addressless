@@ -10,6 +10,7 @@ import moment from 'moment';
 
 import './assets/styles/reset.css';
 import './assets/styles/base.css';
+import './assets/styles/global.css';
 
 const store = configureStore();
 

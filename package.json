@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@vx/curve": "^0.0.112",
+    "@vx/group": "^0.0.114",
+    "@vx/scale": "^0.0.117",
+    "@vx/shape": "^0.0.119",
+    "d3-array": "^1.2.0",
     "firebase": "^3.9.0",
     "google-map-react": "^0.24.0",
     "moment": "^2.18.1",

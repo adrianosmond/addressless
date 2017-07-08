@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom';
 
 import { database as db } from '../../lib/firebase';
 
-class EditorList extends Component {
+import PostPreview from '../../views/PostPreview/PostPreview';
+
+class PostList extends Component {
   state = {
     posts: []
   }
 
   componentWillMount() {
     db.ref('posts').once('value', (result) => {
-
       const allPosts = result.val();
       let postArray = [];
       for (let post in allPosts) {
-        postArray.push({
+        postArray.unshift({
           date: post,
-          title: allPosts[post].title
+          data: allPosts[post]
         });
       }
-
       this.setState({
         posts: postArray
       });
@@ -28,19 +28,21 @@ class EditorList extends Component {
 
   render() {
     return (
-      <div>
-        <h1>List</h1>
-        <ul>
+      <div className='container container--padded'>
+        <Link to={'/'}>Home</Link> &gt;
+        <h1 className='u-spaced-top'>All Posts</h1>
+        <ul className='post-list'>
           {this.state.posts.map((post, idx) => {
             return (
-              <li key={idx}><Link to={'/editor/' + post.date}>{post.title}</Link></li>
+              <li key={idx} className='post-list__item'>
+                <PostPreview data={post.data} date={post.date} />
+              </li>
             );
           })}
         </ul>
-        <Link to='/editor/new'>New Post</Link>
       </div>
     );
   }
 }
 
-export default EditorList;
+export default PostList;

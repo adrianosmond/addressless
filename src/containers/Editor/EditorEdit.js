@@ -7,7 +7,7 @@ import PostSectionEditor from '../../components/PostSectionEditor/PostSectionEdi
 const authors = ["Adrian", "Dina"];
 const globalSectionProps = ["fullWidth", "color"];
 
-class EditPost extends Component {
+class EditorEdit extends Component {
   state = {
   }
 
@@ -172,7 +172,7 @@ class EditPost extends Component {
     }
     return (
       <div className="post-section">
-        <div className="post-section__inner">
+        <div className="container">
           <p>Date: {this.state.postDate}</p>
           <p>Title</p>
           <input type="text" value={this.state.postData.title} placeholder="Post title..." name="title" onChange={this.handleChange.bind(this, 'title')} />
@@ -215,4 +215,4 @@ class EditPost extends Component {
   }
 }
 
-export default EditPost;
+export default EditorEdit;

@@ -3,7 +3,6 @@
 }
 
 .post .metadata {
-  margin-top: 3rem;
   margin-bottom: -2rem;
 }
 
@@ -23,5 +22,14 @@
 .post .h4,
 .post .h5,
 .post .h6 {
+  margin-top: 3rem;
+}
+
+.post-list {
+  padding-left: 0;
+  list-style: none outside none;
+}
+
+.post-list__item {
   margin-top: 3rem;
 }

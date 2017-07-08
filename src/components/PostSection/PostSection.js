@@ -35,7 +35,7 @@ class PostSection extends Component {
     } else {
       return (
         <div className={'post-section' + ( this.props.sectiondata.color ? ' post-section--' + this.props.sectiondata.color : '' )}>
-          <div className="post-section__inner">
+          <div className="container">
             { this.inner(this.props.sectiontype, this.props.sectiondata) }
           </div>
         </div>
