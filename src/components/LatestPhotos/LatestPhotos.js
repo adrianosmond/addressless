@@ -8,52 +8,45 @@ import LoadingPhoto from '../../components/LoadingPhoto/LoadingPhoto';
 
 import './LatestPhotos.css';
 
+const placeholders = {
+  "first": {},
+  "second": {},
+  "third": {}
+};
+
 class LatestPhotos extends Component {
   componentWillMount() {
-    // if (Array.isArray(this.props.photos)) {
-      this.props.loadPhotos();
-    // }
-  }
-
-  placeholderGrid() {
-    // console.log("RENDERED PLACEHOLDERS");
-    return (
-      <div className="latest-photos-grid">
-        <div className="latest-photos-grid__item">
-          <LoadingPhoto />
-        </div>
-        <div className="latest-photos-grid__item">
-          <LoadingPhoto />
-        </div>
-        <div className="latest-photos-grid__item">
-          <LoadingPhoto />
-        </div>
-      </div>
-    );
+    this.props.loadPhotos();
   }
 
   render () {
+    let photos = placeholders;
+    if (Object.keys(this.props.photos).length > 0) {
+      photos = this.props.photos;
+    }
+
     return (
-      <div className="home-grid__item home-grid__item--photos">
-        <div className="home-grid__heading">
-          <h2 className="home-grid__subtitle">Latest Photos</h2>
-          <Link className="home-grid__more-link" to="/photos">View all photos</Link>
+      <div className='home-grid__item home-grid__item--photos'>
+        <div className='home-grid__heading'>
+          <h2 className='home-grid__subtitle'>Latest Photos</h2>
+          <Link className='home-grid__more-link' to='/photos'>View all photos</Link>
         </div>
-        {
-          Object.keys(this.props.photos).length === 0 ?
-            this.placeholderGrid()
-          :
-            <div className="latest-photos-grid">
-              {Object.keys(this.props.photos).reverse().map((id) => {
-                const photo = this.props.photos[id];
-                return (
-                  <Link to={`photos/${urlSafeString(photo.title)}/${id}`} key={id} className="latest-photos-grid__item">
-                    <LoadingPhoto img={`${photo.url}`} />
-                  </Link>
-                );
-              })}
-            </div>
-        }
+        <div className='photos-grid'>
+          {Object.keys(photos).reverse().map((id) => {
+            const photo = this.props.photos[id];
+            if (photo) {
+              return (
+                <Link to={`photos/${urlSafeString(photo.title)}/${id}`} key={id} className='photos-grid__item'>
+                  <LoadingPhoto img={`${photo.url}`} />
+                </Link>
+              );
+            } else {
+              return (
+                <LoadingPhoto key={id} />
+              );
+            }
+          })}
+        </div>
       </div>
     );
   }

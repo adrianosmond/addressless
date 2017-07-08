@@ -7,7 +7,7 @@ import LoadingPost from '../LoadingPost/LoadingPost';
 import './PostPreview.css';
 
 const PostPreview = (props) => {
-  if (props.data.contents && props.data.contents.length > 0) {
+  if (props.data && props.data.contents && props.data.contents.length > 0) {
     return (
       <Link to={`/posts/${props.date}`} className="post-preview">
         <Metadata className="post-preview__metadata" data={{date: props.date, location: props.data.location}} />

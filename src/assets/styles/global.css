@@ -15,6 +15,14 @@
   padding-top: 2rem;
 }
 
-.u-spaced-top {
+.u-spaced-top--half {
   margin-top: 0.5rem;
+}
+
+.u-spaced-top {
+  margin-top: 1rem;
+}
+
+.u-spaced-top--double {
+  margin-top: 2rem;
 }

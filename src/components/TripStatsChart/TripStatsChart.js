@@ -21,7 +21,7 @@ const yMax = height - margin.top - margin.bottom;
 class TripStatsChart extends Component {
 
   render () {
-    console.log(this.props.data);
+    // console.log(this.props.data);
 
     return (
       <div className="trip-stats-chart">
@@ -33,8 +33,8 @@ class TripStatsChart extends Component {
                 domain: this.props.data.timeExtent
               });
 
-              console.log("SERIES", series);
-              console.log("MAX", max(series, y));
+              // console.log("SERIES", series);
+              // console.log("MAX", max(series, y));
 
               const yScale = scaleLinear({
                 range: [yMax, 0],

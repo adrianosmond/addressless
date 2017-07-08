@@ -3,10 +3,11 @@ import {database as db} from '../../lib/firebase';
 
 import Photo from '../../components/Photo/Photo';
 
-class SinglePhoto extends Component {
+class PhotosSingle extends Component {
   state = {
     title: ""
   }
+  
   componentWillMount() {
     db.ref(`photos/${this.props.match.params.photoId}`).once("value", (result) => {
       this.setState(result.val());
@@ -24,4 +25,4 @@ class SinglePhoto extends Component {
   }
 }
 
-export default SinglePhoto;
+export default PhotosSingle;

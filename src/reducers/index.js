@@ -2,6 +2,8 @@ import { combineReducers } from 'redux';
 import { latestPhotosAreLoading, latestPhotos } from './latestPhotos';
 import { latestPostIsLoading, latestPost } from './latestPost';
 import { tripStatsAreLoading, tripStats } from './tripStats';
+import { photoListIsLoading, photoList } from './photoList';
+import { postListIsLoading, postList } from './postList';
 
 export default combineReducers({
   latestPhotosAreLoading,
@@ -9,5 +11,9 @@ export default combineReducers({
   latestPostIsLoading,
   latestPost,
   tripStatsAreLoading,
-  tripStats
+  tripStats,
+  photoListIsLoading,
+  photoList,
+  postListIsLoading,
+  postList
 });
