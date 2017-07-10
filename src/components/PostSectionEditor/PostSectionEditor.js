@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import HeadingEditor from '../../views/HeadingEditor/HeadingEditor';
 import TextLeadEditor from '../../views/TextLeadEditor/TextLeadEditor';
 import TextParaEditor from '../../views/TextParaEditor/TextParaEditor';
-import PhotoEditor from '../../views/PhotoEditor/PhotoEditor';
+import PhotoEditor from '../../components/PhotoEditor/PhotoEditor';
 import QuoteEditor from '../../views/QuoteEditor/QuoteEditor';
 import MapEditor from '../../views/MapEditor/MapEditor';
 

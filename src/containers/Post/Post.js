@@ -9,7 +9,6 @@ import PostView from './PostView.js';
 
 class Post extends Component {
   render() {
-    console.log("POST Component");
     return (
       <Switch>
         <Route exact path='/posts' component={PostList} />

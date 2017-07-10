@@ -41,7 +41,8 @@ class EditorEdit extends Component {
       };
     } else if (type === 'photo') {
       return {
-        url: '/assets/images/img.jpg',
+        id: '',
+        url: '',
         alt: '',
         caption: ''
       };
@@ -55,13 +56,13 @@ class EditorEdit extends Component {
   }
 
   handleChange(input, e) {
-    const change = {
-      postData: {
-        [input]: e.target.value
-      }
-    };
-    console.log(change);
-    this.setState(change);
+    let postData = this.state.postData;
+
+    postData[input] = e.target.value;
+
+    this.setState({
+      postData
+    });
   }
 
   addSection() {
@@ -171,15 +172,15 @@ class EditorEdit extends Component {
       );
     }
     return (
-      <div className="post-section">
-        <div className="container">
+      <div className='post-section'>
+        <div className='container container--padded'>
           <p>Date: {this.state.postDate}</p>
           <p>Title</p>
-          <input type="text" value={this.state.postData.title} placeholder="Post title..." name="title" onChange={this.handleChange.bind(this, 'title')} />
+          <input type='text' value={this.state.postData.title} placeholder='Post title...' name='title' onChange={this.handleChange.bind(this, 'title')} />
           <p>Location</p>
-          <input type="text" value={this.state.postData.location} placeholder="Location" name="location" onChange={this.handleChange.bind(this, 'location')} />
+          <input type='text' value={this.state.postData.location} placeholder='Location' name='location' onChange={this.handleChange.bind(this, 'location')} />
           <p>Author</p>
-          <select name="author" onChange={this.handleChange.bind(this, 'author')} value={this.state.postData.author}>
+          <select name='author' onChange={this.handleChange.bind(this, 'author')} value={this.state.postData.author}>
             {authors.map((author) => {
               return (
                 <option key={author} value={author.toLowerCase()}>{author}</option>
@@ -202,10 +203,10 @@ class EditorEdit extends Component {
                   deleteSection={this.deleteSection.bind(this, idx)} />
               );
             }) : ''}
-            <p><button onClick={this.addSection.bind(this)}>Add Section</button></p>
+            <p className='u-spaced-top--double'><button onClick={this.addSection.bind(this)}>Add Section</button></p>
           </div>
 
-          <p>
+          <p className='u-spaced-top--half'>
             <button onClick={this.savePost.bind(this)}>Save Post</button>
             <button onClick={this.deletePost.bind(this)}>Delete Post</button>
           </p>
