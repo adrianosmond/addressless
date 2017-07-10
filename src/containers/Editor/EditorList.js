@@ -30,6 +30,7 @@ class EditorList extends Component {
     return (
       <div>
         <h1>List</h1>
+        <Link to='/editor/new'>New Post</Link>
         <ul>
           {this.state.posts.map((post, idx) => {
             return (
@@ -37,7 +38,6 @@ class EditorList extends Component {
             );
           })}
         </ul>
-        <Link to='/editor/new'>New Post</Link>
       </div>
     );
   }

@@ -11,7 +11,7 @@ class MapEditor extends Component {
       <div>
         <label style={{display: 'block'}}>
           Map Type:
-          <select value={this.props.data.mapType} onChange={this.props.changeContents.bind(this, 'mapType')}>
+          <select value={this.props.data.mapStyle} onChange={this.props.changeContents.bind(this, 'mapStyle')}>
             <option value='terrain'>Terrain</option>
             <option value='styled'>Styled</option>
           </select>
