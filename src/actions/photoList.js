@@ -19,7 +19,13 @@ export function loadPhotoList() {
     dispatch(photoListIsLoading(true));
 
     database.ref("photos").once("value", (result) => {
-      dispatch(photoList(result.val()));
+      let list = result.val();
+      for (let key in list) {
+        if (!list[key].caption) {
+          list[key].caption = "";
+        }
+      }
+      dispatch(photoList(list));
       dispatch(photoListIsLoading(false));
     });
   };

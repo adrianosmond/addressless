@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Redirect } from 'react-router-dom';
 import { database as db } from '../../lib/firebase';
 
 import PostSectionEditor from '../../components/PostSectionEditor/PostSectionEditor';
@@ -9,6 +9,7 @@ const globalSectionProps = ["fullWidth", "color"];
 
 class EditorEdit extends Component {
   state = {
+    deleted: false
   }
 
   componentWillMount() {
@@ -157,20 +158,35 @@ class EditorEdit extends Component {
   }
 
   savePost() {
+    console.log(this.state.postData);
     db.ref(`posts/${this.state.postDate}`).set(this.state.postData).then(() => {
       alert('Saved!');
     });
   }
 
   deletePost() {
+    if (window.confirm('Are you sure you want to delete this post?')) {
+      db.ref(`posts/${this.state.postDate}`).set(null).then(() => {
+        this.setState({
+          deleted: true
+        })
+      });
+    }
   }
 
   render() {
+    if (this.state.deleted) {
+      return (
+        <Redirect to='/editor' />
+      );
+    }
+
     if (!this.state.postData) {
       return (
         <div>Loading...</div>
       );
     }
+
     return (
       <div className='post-section'>
         <div className='container container--padded'>
