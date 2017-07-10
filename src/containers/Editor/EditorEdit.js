@@ -49,9 +49,13 @@ class EditorEdit extends Component {
       };
     } else if (type === 'map') {
       return {
-        centerlat : 51.504362,
-        centerlng : -0.126343,
-        zoom : 12
+        mapStyle: 'terrain',
+        mapRoute: '',
+        nwlat: -40.31841,
+        nwlng: 171.77124,
+        selat: -41.526186,
+        selng: 174.506836,
+        mapType: 'article'
       };
     }
   }
@@ -158,7 +162,6 @@ class EditorEdit extends Component {
   }
 
   savePost() {
-    console.log(this.state.postData);
     db.ref(`posts/${this.state.postDate}`).set(this.state.postData).then(() => {
       alert('Saved!');
     });

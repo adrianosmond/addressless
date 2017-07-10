@@ -8,7 +8,6 @@ class PhotoEditor extends Component {
   }
   changePhoto(e) {
     const photo = this.props.photos[e.target.value];
-    console.log('changePhoto', photo);
     this.props.changeContents.call(this, 'id', e);
     this.props.changeContents.call(this, 'url', {target: {value: photo.url}});
     this.props.changeContents.call(this, 'caption', {target: {value: photo.caption}});
@@ -21,11 +20,11 @@ class PhotoEditor extends Component {
           Photo:
           { this.props.isLoading ? ' Loading ' :
             <select value={this.props.data.id} onChange={this.changePhoto.bind(this)}>
-              {Object.keys(this.props.photos).map((photoId) => {
+              {this.props.photos ? Object.keys(this.props.photos).map((photoId) => {
                 return (
                   <option key={photoId} value={photoId}>{this.props.photos[photoId].title}</option>
                 );
-              })}
+              }) : null}
             </select>
           }
         </label>

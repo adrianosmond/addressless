@@ -3,6 +3,7 @@ import { latestPhotosAreLoading, latestPhotos } from './latestPhotos';
 import { latestPostIsLoading, latestPost } from './latestPost';
 import { tripStatsAreLoading, tripStats } from './tripStats';
 import { photoListIsLoading, photoList } from './photoList';
+import { routeListIsLoading, routeList } from './routeList';
 import { postListIsLoading, postList } from './postList';
 
 export default combineReducers({
@@ -15,5 +16,7 @@ export default combineReducers({
   photoListIsLoading,
   photoList,
   postListIsLoading,
-  postList
+  postList,
+  routeListIsLoading,
+  routeList
 });

@@ -1,0 +1,10 @@
+{
+  "backgroundColor": "#14141f",
+  "disableDoubleClickZoom": true,
+  "disableDefaultUI": true,
+  "draggable": false,
+  "gestureHandling": "none",
+  "keyboardShortcuts": false,
+  "scrollwheel": false,
+  "mapTypeId": "terrain"
+}

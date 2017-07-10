@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { fitBounds } from 'google-map-react/utils';
 import mapOptions from './mapOptions.json';
+import terrainMapOptions from './terrainMapOptions.json';
 
 import './Map.css';
 
@@ -55,7 +56,14 @@ class Map extends Component {
           defaultZoom={5}
           zoom={this.state.zoom > 0 ? this.state.zoom : null}
           onChange={this.calculateCenterAndZoom.bind(this)}
-          options={mapOptions}
+          options={this.props.data.mapStyle==='terrain'? terrainMapOptions : mapOptions}
+          onGoogleApiLoaded={this.props.data.mapRoute? ({map, maps}) => {
+            map.data.loadGeoJson(this.props.data.mapRoute);
+            map.data.setStyle({
+              strokeColor: 'red'
+            })
+          } : null}
+          yesIWantToUseGoogleMapApiInternals
         ></GoogleMapReact>
       </div>
     );

@@ -4,7 +4,7 @@ import TextLeadEditor from '../../views/TextLeadEditor/TextLeadEditor';
 import TextParaEditor from '../../views/TextParaEditor/TextParaEditor';
 import PhotoEditor from '../../components/PhotoEditor/PhotoEditor';
 import QuoteEditor from '../../views/QuoteEditor/QuoteEditor';
-import MapEditor from '../../views/MapEditor/MapEditor';
+import MapEditor from '../../components/MapEditor/MapEditor';
 
 import './PostSectionEditor.css';
 
