@@ -8,16 +8,10 @@ const TripMap = () => (
     <div className='trip-map__inner'>
       <Map data={{
         mapType: 'full-height',
-        bounds: {
-          nw: {
-            lat: -33.598607,
-            lng: 165.322266
-          },
-          se: {
-            lat: -47.829752,
-            lng: 179.384766
-          }
-        }
+        nwlat: -33.598607,
+        nwlng: 165.322266,
+        selat: -47.829752,
+        selng: 179.384766
       }}/>
     </div>
   </div>

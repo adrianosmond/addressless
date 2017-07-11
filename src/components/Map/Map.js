@@ -29,7 +29,20 @@ class Map extends Component {
       height: this.container.clientHeight
     };
 
-    const {center, zoom} = fitBounds(this.props.data.bounds, size);
+    const bounds = {
+      nw: {
+        lat: this.props.data.nwlat,
+        lng: this.props.data.nwlng,
+      },
+      se: {
+        lat: this.props.data.selat,
+        lng: this.props.data.selng,
+      }
+    };
+
+    const {center, zoom} = fitBounds(bounds, size);
+
+    console.log(bounds, center, zoom);
 
     this.setState({
       center,
