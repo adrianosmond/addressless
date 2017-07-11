@@ -3,7 +3,6 @@ import { Link, Redirect } from 'react-router-dom';
 import { database as db } from '../../lib/firebase';
 
 import PostSection from '../../components/PostSection/PostSection';
-import Photo from '../../components/Photo/Photo';
 import LoadingPost from '../../views/LoadingPost/LoadingPost';
 
 import './Post.css';
