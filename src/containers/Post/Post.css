@@ -33,3 +33,43 @@
 .post-list__item {
   margin-top: 3rem;
 }
+
+.post-title-holder {
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.post-top-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.post-top-wrapper:before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6rem;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.post-title-holder .post-top-wrapper:before {
+  content: "";
+}
+
+.post-title-and-date {
+  position: relative;
+  transform: translateY(calc(100vh - 100% - 8rem));
+}
+
+.post-title-and-date:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -2.5rem;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.6) 100%);
+}

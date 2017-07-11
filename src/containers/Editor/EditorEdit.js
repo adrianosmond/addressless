@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { loadPhotoList } from '../../actions/photoList';
 import { database as db } from '../../lib/firebase';
-
 import PostSectionEditor from '../../components/PostSectionEditor/PostSectionEditor';
 
 const authors = ["Adrian", "Dina"];
@@ -13,6 +14,8 @@ class EditorEdit extends Component {
   }
 
   componentWillMount() {
+    this.props.loadPhotos();
+
     const postDate = this.props.match.params.postDate;
 
     db.ref(`posts/${postDate}`).once("value", (result) => {
@@ -63,7 +66,11 @@ class EditorEdit extends Component {
   handleChange(input, e) {
     let postData = this.state.postData;
 
-    postData[input] = e.target.value;
+    if (input === 'published') {
+      postData[input] = e.target.checked;
+    } else {
+      postData[input] = e.target.value;
+    }
 
     this.setState({
       postData
@@ -196,6 +203,17 @@ class EditorEdit extends Component {
           <p>Date: {this.state.postDate}</p>
           <p>Title</p>
           <input type='text' value={this.state.postData.title} placeholder='Post title...' name='title' onChange={this.handleChange.bind(this, 'title')} />
+          <p>Title photo:</p>
+          { this.props.isLoading ? ' Loading ' :
+            <select value={this.state.postData.titlePhoto} onChange={this.handleChange.bind(this, 'titlePhoto')}>
+              <option value=''>None</option>
+              {this.props.photos ? Object.keys(this.props.photos).map((photoId) => {
+                return (
+                  <option key={photoId} value={this.props.photos[photoId].url}>{this.props.photos[photoId].title}</option>
+                );
+              }) : null}
+            </select>
+          }
           <p>Location</p>
           <input type='text' value={this.state.postData.location} placeholder='Location' name='location' onChange={this.handleChange.bind(this, 'location')} />
           <p>Author</p>
@@ -206,6 +224,7 @@ class EditorEdit extends Component {
               );
             })}
           </select>
+          <p>Published <input type='checkbox' checked={this.state.postData.published} onChange={this.handleChange.bind(this, 'published')}  /></p>
 
           <div>
             {this.state.postData.contents? this.state.postData.contents.map((section, idx) => {
@@ -229,10 +248,26 @@ class EditorEdit extends Component {
             <button onClick={this.savePost.bind(this)}>Save Post</button>
             <button onClick={this.deletePost.bind(this)}>Delete Post</button>
           </p>
+          <p>
+            <Link to={`/posts/${this.props.match.params.postDate}`} target="_blank">View this post</Link>
+          </p>
         </div>
       </div>
     );
   }
 }
 
-export default EditorEdit;
+const mapStateToProps = (state) => {
+  return {
+    photos: state.photoList,
+    isLoading: state.photoListIsLoading
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loadPhotos: () => dispatch(loadPhotoList())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditorEdit);

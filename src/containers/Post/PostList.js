@@ -14,15 +14,23 @@ class PostList extends Component {
 
   render() {
     let posts = placeholders;
-    if (this.props.posts.length > 0) {
-      posts = this.props.posts;
+    if (!this.props.isLoading) {
+      if (this.props.posts.length > 0) {
+        posts = this.props.posts;
+      } else {
+        posts = [];
+      }
     }
+    console.log(posts);
     return (
       <div className='container container--padded'>
         <Link to={'/'}>Home</Link> &gt; All Posts
         <h1 className='u-spaced-top--half'>All Posts</h1>
         <ul className='post-list'>
-          {posts.map((post, idx) => {
+          {posts.filter((post) => {
+            console.log(post);
+            return !post.data || post.data.published === true
+          }).map((post, idx) => {
             return (
               <li key={idx} className='post-list__item'>
                 { post.data? <PostPreview data={post.data} date={post.date} /> : <PostPreview /> }

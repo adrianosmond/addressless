@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { database as db } from '../../lib/firebase';
 
 import PostSection from '../../components/PostSection/PostSection';
+import Photo from '../../components/Photo/Photo';
 import LoadingPost from '../../views/LoadingPost/LoadingPost';
 
 import './Post.css';
@@ -14,7 +15,7 @@ class Post extends Component {
   componentWillMount() {
     const postDate = this.props.match.params.postDate;
 
-    db.ref(`posts/${postDate}`).once("value", (result) => {
+    db.ref(`posts/${postDate}`).once('value', (result) => {
       const postData = result.val();
       if (postData === null) {
         this.setState({
@@ -27,6 +28,20 @@ class Post extends Component {
         });
       }
     });
+  }
+
+  postTop() {
+    return (
+      <div className='post-top-wrapper'>
+        <div className='container container--padded-top'>
+          <Link to={'/'}>Home</Link> &gt; <Link to={'/posts'}>Posts</Link>
+        </div>
+        <div className='post-title-and-date'>
+          <PostSection sectiontype='metadata' sectiondata={{ date: this.state.postDate, location: this.state.postData.location}} />
+          <PostSection sectiontype='heading' sectiondata={{ text: this.state.postData.title, level: 1}} />
+        </div>
+      </div>
+    )
   }
 
   render() {
@@ -50,18 +65,18 @@ class Post extends Component {
     }
 
     return (
-      <article className="post">
-        <div className="container container--padded-top">
-          <Link to={'/'}>Home</Link> &gt; <Link to={'/posts'}>Posts</Link>
-        </div>
-        <PostSection sectiontype="metadata" sectiondata={{ date: this.state.postDate, location: this.state.postData.location}} />
-        <PostSection sectiontype="heading" sectiondata={{ text: this.state.postData.title, level: 1}} />
+      <article className='post'>
+        { this.state.postData.titlePhoto?
+          <div className='post-title-holder' style={{backgroundImage: `url(${this.state.postData.titlePhoto})`}}>
+            {this.postTop()}
+          </div> : this.postTop() }
+
         {this.state.postData.contents ? this.state.postData.contents.map((section, idx) => {
           return (
             <PostSection key={idx} sectiontype={section.type} sectiondata={section.data} />
           );
         }) : ''}
-        {/* <PostSection sectiontype="statslist" sectiondata={{fullWidth: true}} /> */}
+        {/* <PostSection sectiontype='statslist' sectiondata={{fullWidth: true}} /> */}
       </article>
     );
   }
