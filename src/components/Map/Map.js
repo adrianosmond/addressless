@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { fitBounds } from 'google-map-react/utils';
+import { fitBounds, meters2ScreenPixels } from 'google-map-react/utils';
 import mapOptions from './mapOptions.json';
 import terrainMapOptions from './terrainMapOptions.json';
 
@@ -42,7 +42,11 @@ class Map extends Component {
 
     const {center, zoom} = fitBounds(bounds, size);
 
-    console.log(bounds, center, zoom);
+    if (this.props.containerHeight) {
+      const mapHeight = meters2ScreenPixels(1400000, center, zoom).h;
+      console.log("size while centering", mapHeight);
+      this.props.containerHeight(mapHeight);
+    }
 
     this.setState({
       center,

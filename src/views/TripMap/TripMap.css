@@ -1,7 +1,7 @@
 .trip-map {
   position: relative;
   height: 0;
-  padding-bottom: 120%;
+  padding-bottom: 100%;
 }
 
 .trip-map__inner {
