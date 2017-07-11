@@ -25,7 +25,7 @@ class PostList extends Component {
     return (
       <div className='container container--padded'>
         <Link to={'/'}>Home</Link> &gt; All Posts
-        <h1 className='u-spaced-top--half'>All Posts</h1>
+        {/* <h1 className='u-spaced-top--half'>All Posts</h1> */}
         <ul className='post-list'>
           {posts.filter((post) => {
             console.log(post);

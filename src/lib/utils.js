@@ -14,6 +14,6 @@ const formatDate = (dateStr) => {
   );
 };
 
-const urlSafeString = (string) => string.toLowerCase().replace(/[^a-z]/g, '-').replace(/--/g, '-');
+const urlSafeString = (string) => string.toLowerCase().replace(/[^a-z]/g, '-').replace(/--/g, '-').replace(/-$/, '').replace(/^-/, '');
 
 export { addCommasToNumber, formatDate, urlSafeString };
