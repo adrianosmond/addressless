@@ -44,7 +44,6 @@ class Map extends Component {
 
     if (this.props.containerHeight) {
       const mapHeight = meters2ScreenPixels(1400000, center, zoom).h;
-      console.log("size while centering", mapHeight);
       this.props.containerHeight(mapHeight);
     }
 

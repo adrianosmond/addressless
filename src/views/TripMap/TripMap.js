@@ -8,7 +8,6 @@ class TripMap extends Component {
   }
 
   render () {
-    console.log(this.state.padding)
     return (
       <div className='trip-map u-spaced-top--double' style={this.state.height? {paddingBottom: 0, height: this.state.height}: null}>
         <div className='trip-map__inner'>
@@ -20,7 +19,6 @@ class TripMap extends Component {
               selng: 178.631522
             }}
             containerHeight={(height) => {
-              console.log("HEIGHT", height);
               this.setState({
                 height
               })

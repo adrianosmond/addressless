@@ -6,6 +6,13 @@
   margin-right: auto;
 }
 
+@media (min-width: 600px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .container--padded {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -25,4 +32,15 @@
 
 .u-spaced-top--double {
   margin-top: 2rem;
+}
+
+.u-screen-reader {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }

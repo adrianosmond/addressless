@@ -38,14 +38,14 @@ class RoutesNew extends Component {
 
     uploadTask.on('state_changed',
       (snapshot) => {
-        console.log("PROGRESS", ((snapshot.bytesTransferred / snapshot.totalBytes) * 100), snapshot);
+        // console.log("PROGRESS", ((snapshot.bytesTransferred / snapshot.totalBytes) * 100), snapshot);
         this.setState({
           progress: ((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
         });
       }, (error) => {
-        console.log("UPLOAD FAILED", error);
+        // console.log("UPLOAD FAILED", error);
       }, () => {
-        console.log("UPLOAD COMPLETE");
+        // console.log("UPLOAD COMPLETE");
         db.ref('routes').push({
           url: uploadTask.snapshot.downloadURL,
           title

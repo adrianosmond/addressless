@@ -21,14 +21,12 @@ class PostList extends Component {
         posts = [];
       }
     }
-    console.log(posts);
     return (
       <div className='container container--padded'>
+        <h1 className="u-screen-reader">All Posts</h1>
         <Link to={'/'}>Home</Link> &gt; All Posts
-        {/* <h1 className='u-spaced-top--half'>All Posts</h1> */}
         <ul className='post-list'>
           {posts.filter((post) => {
-            console.log(post);
             return !post.data || post.data.published === true
           }).map((post, idx) => {
             return (

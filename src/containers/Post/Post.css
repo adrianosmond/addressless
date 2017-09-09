@@ -37,6 +37,7 @@
 .post-title-holder {
   min-height: 100vh;
   background-size: cover;
+  background-position: 50% 50%;
 }
 
 .post-top-wrapper {
