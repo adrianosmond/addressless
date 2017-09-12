@@ -9,8 +9,7 @@ class Home extends Component {
     return (
       <div>
         <h1>
-          Sizzling Steaks<br/>
-          &amp; Sleepy Potatoes
+          Addressless
         </h1>
         <TripMap />
       </div>
