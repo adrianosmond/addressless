@@ -1,19 +1,22 @@
 .text-lead {
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   letter-spacing: 0.025em;
-  font-size: 1.25em;
-  line-height: 1.6666666666;
+  font-size: 1.1em;
 }
 
-.text-lead:first-letter {
-  float: left;
-  font-size: 3.2em;
-  line-height: 1;
-  padding-right: 0.05em;
-}
+@media (min-width: 600px) {
+  .text-lead {
+    margin-top: 3rem;
+    font-size: 1.25em;
+    line-height: 1.6666666666;
+  }
 
-@media (min-width: 900px) {
-  font-size: 1.5em;
+  .text-lead:first-letter {
+    float: left;
+    font-size: 3.2em;
+    line-height: 1;
+    padding-right: 0.05em;
+  }
 }

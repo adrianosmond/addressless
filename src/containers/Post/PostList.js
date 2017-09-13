@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { loadPostList } from '../../actions/postList';
-import PostPreview from '../../views/PostPreview/PostPreview';
+import PostsList from '../../views/PostList/PostList';
 
 const placeholders = [{}, {}, {}];
 
@@ -25,17 +25,7 @@ class PostList extends Component {
       <div className='container container--padded'>
         <h1 className="u-screen-reader">All Posts</h1>
         <Link to={'/'}>Home</Link> &gt; All Posts
-        <ul className='post-list'>
-          {posts.filter((post) => {
-            return !post.data || post.data.published === true
-          }).map((post, idx) => {
-            return (
-              <li key={idx} className='post-list__item'>
-                { post.data? <PostPreview data={post.data} date={post.date} /> : <PostPreview /> }
-              </li>
-            );
-          })}
-        </ul>
+        <PostsList posts={posts} />
       </div>
     );
   }
