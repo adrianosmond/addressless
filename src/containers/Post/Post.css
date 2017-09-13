@@ -46,6 +46,7 @@
 
 .post-title-holder--home {
   min-height: 75vh;
+  background-position: 50% 100%;
 }
 
 .post-top-wrapper {

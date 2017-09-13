@@ -38,7 +38,7 @@ class Home extends Component {
     }
     return (
       <div>
-        <div className='post-title-holder post-title-holder--home' style={{backgroundImage: 'url("/assets/images/img1.jpg")'}}>
+        <div className='post-title-holder post-title-holder--home' style={{backgroundImage: 'url("/assets/images/home.jpg")'}}>
           <div className='post-top-wrapper'>
             <div className='post-title-and-date'>
               <PostSection sectiontype='heading' sectiondata={{ text: 'Upside Down & Addressless', level: 1}} />
