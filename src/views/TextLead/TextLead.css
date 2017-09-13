@@ -15,8 +15,8 @@
 
   .text-lead:first-letter {
     float: left;
-    font-size: 3.2em;
-    line-height: 1;
+    font-size: 3.35em;
+    line-height: 0.9;
     padding-right: 0.05em;
   }
 }
