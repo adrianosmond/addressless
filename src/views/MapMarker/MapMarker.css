@@ -1,0 +1,8 @@
+.map-marker {
+  height: 26px;
+  width: 11px;
+  margin-top: -26px;
+  margin-left: -5px;
+  background-size: 100%;
+  background-image: url("/assets/images/map-icon.png");
+}

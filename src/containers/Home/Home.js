@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import { loadPostList } from '../../actions/postList';
 import PostSection from '../../components/PostSection/PostSection';
 import PostList from '../../views/PostList/PostList';
+import Map from '../../components/Map/Map';
+import MapMarker from '../../views/MapMarker/MapMarker';
 import "./Home.css";
 
 const placeholders = [{}, {}, {}];
@@ -54,9 +56,22 @@ class Home extends Component {
           </p>
         </div>
         <div className='container container--padded'>
-          <PostSection sectiontype='heading' sectiondata={{ fullWidth: true,text: 'Our latest posts', level: 2}} />
+          <PostSection sectiontype='heading' sectiondata={{ fullWidth: true, text: 'Our latest posts', level: 2}} />
           <PostList posts={posts} limit={3} spaced={true} />
         </div>
+        <div className='container'>
+          <PostSection sectiontype='heading' sectiondata={{ fullWidth: true, text: 'Where we\'re at', level: 2}} style={{marginTop: '2rem'}}/>
+        </div>
+        <Map data={{
+          mapType: 'homepage',
+          mapRoute: '/assets/routes/nz-trip.json',
+          nwlat: -36.5317088,
+          nwlng: 174.265136,
+          selat: -38.3373476,
+          selng: 176.638183
+        }}>
+          <MapMarker lat={-38.137797} lng={176.252288} />
+        </Map>
       </div>
     );
   }

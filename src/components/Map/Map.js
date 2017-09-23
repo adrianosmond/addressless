@@ -3,7 +3,6 @@ import GoogleMapReact from 'google-map-react';
 import { fitBounds, meters2ScreenPixels } from 'google-map-react/utils';
 import mapOptions from './mapOptions.json';
 import terrainMapOptions from './terrainMapOptions.json';
-
 import './Map.css';
 
 class Map extends Component {
@@ -64,12 +63,12 @@ class Map extends Component {
           options={this.props.data.mapStyle==='terrain'? terrainMapOptions : mapOptions}
           onGoogleApiLoaded={this.props.data.mapRoute? ({map, maps}) => {
             map.data.setStyle({
-              strokeColor: 'red'
+              strokeColor: '#a8c9ff'
             })
             map.data.loadGeoJson(this.props.data.mapRoute);
           } : null}
           yesIWantToUseGoogleMapApiInternals
-        ></GoogleMapReact>
+        >{this.props.children}</GoogleMapReact>
       </div>
     );
   }
