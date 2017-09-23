@@ -55,7 +55,7 @@ class Home extends Component {
         </div>
         <div className='container container--padded'>
           <PostSection sectiontype='heading' sectiondata={{ fullWidth: true,text: 'Our latest posts', level: 2}} />
-          <PostList posts={posts} limit={3} />
+          <PostList posts={posts} limit={3} spaced={true} />
         </div>
       </div>
     );
