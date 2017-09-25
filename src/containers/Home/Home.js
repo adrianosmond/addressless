@@ -70,7 +70,7 @@ class Home extends Component {
           selat: -38.3373476,
           selng: 176.638183
         }}>
-          <MapMarker lat={-38.137797} lng={176.252288} />
+          <MapMarker lat={-38.687117} lng={176.068954} />
         </Map>
       </div>
     );
