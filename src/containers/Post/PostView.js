@@ -62,6 +62,10 @@ class Post extends Component {
         </div>
       );
     }
+    
+    if (this.state.postData.title) {
+      document.title = `${this.state.postData.title} - Upside Down & Addressless`;
+    }
 
     return (
       <article className='post'>
