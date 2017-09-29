@@ -62,9 +62,13 @@ class Map extends Component {
           onChange={this.calculateCenterAndZoom.bind(this)}
           options={this.props.data.mapStyle==='terrain'? terrainMapOptions : mapOptions}
           onGoogleApiLoaded={this.props.data.mapRoute? ({map, maps}) => {
+            let pathColour = '#a8c9ff';
+            if (this.props.data.mapStyle === 'terrain') {
+              pathColour = '#ff0000';
+            }
             map.data.setStyle({
-              strokeColor: '#a8c9ff'
-            })
+              strokeColor: pathColour
+            });
             map.data.loadGeoJson(this.props.data.mapRoute);
           } : null}
           yesIWantToUseGoogleMapApiInternals

@@ -30,7 +30,7 @@ class Home extends Component {
   }
 
   render() {
-    document.title = 'All Posts - Upside Down & Addressless';
+    document.title = 'Upside Down & Addressless';
     let posts = placeholders;
     if (!this.props.isLoading) {
       if (this.props.posts.length > 0) {
