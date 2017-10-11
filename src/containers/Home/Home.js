@@ -67,11 +67,11 @@ class Home extends Component {
           mapType: 'homepage',
           mapRoute: '/assets/routes/nz-trip.json',
           nwlat: -36.624345,
-          nwlng: 173.770751,
+          nwlng: 173.000000,
           selat: -41.771311,
           selng: 177.121582
         }}>
-          <MapMarker lat={-41.285019} lng={174.005392} />
+          <MapMarker lat={-41.116607} lng={173.007202} />
         </Map>
       </div>
     );
