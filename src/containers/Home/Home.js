@@ -66,12 +66,12 @@ class Home extends Component {
         <Map data={{
           mapType: 'homepage',
           mapRoute: '/assets/routes/nz-trip.json',
-          nwlng: 168.991699,
+          nwlng: 168.191699,
           nwlat: -36.385912,
           selng: 177.253417,
-          selat: -45.011418
+          selat: -45.000000
         }}>
-          <MapMarker lat={-44.703802} lng={169.140014} />
+          <MapMarker lat={-45.034714} lng={168.684082} />
         </Map>
       </div>
     );
