@@ -7,7 +7,6 @@ import { loadPostList } from '../../actions/postList';
 import PostSection from '../../components/PostSection/PostSection';
 import PostList from '../../views/PostList/PostList';
 import Map from '../../components/Map/Map';
-import MapMarker from '../../views/MapMarker/MapMarker';
 import "./Home.css";
 
 const placeholders = [{}, {}, {}];
@@ -65,14 +64,8 @@ class Home extends Component {
         </div>
         <Map data={{
           mapType: 'homepage',
-          mapRoute: '/assets/routes/nz-trip.json',
-          nwlng: 167,
-          nwlat: -36.385912,
-          selng: 177.253417,
-          selat: -47
-        }}>
-          <MapMarker lat={-45.417732} lng={167.717285} />
-        </Map>
+          mapRoute: '/assets/routes/nz-trip.json'
+        }}/>
       </div>
     );
   }
