@@ -71,12 +71,14 @@ class Map extends Component {
     fetch(this.props.data.mapRoute).then(r => r.json())
     .then(data => {
       map.data.addGeoJson(data);
-      data.features[0].geometry.coordinates.forEach(latLng => {
-        minLat = Math.min(minLat, latLng[1]);
-        maxLat = Math.max(maxLat, latLng[1]);
-        minLng = Math.min(minLng, latLng[0]);
-        maxLng = Math.max(maxLng, latLng[0]);
-      });
+      data.features.forEach(feature => {
+        feature.geometry.coordinates.forEach(latLng => {
+          minLat = Math.min(minLat, latLng[1]);
+          maxLat = Math.max(maxLat, latLng[1]);
+          minLng = Math.min(minLng, latLng[0]);
+          maxLng = Math.max(maxLng, latLng[0]);
+        });
+      })
 
       this.bounds = {
         nw: {
