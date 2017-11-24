@@ -6,7 +6,9 @@ class Photo extends Component {
   caption () {
     if (this.props.data.caption && !this.props.nocaption) {
       return (
-        <figcaption className="photo__caption">{this.props.data.caption}</figcaption>
+        <div className="container">
+          <figcaption className="photo__caption">{this.props.data.caption}</figcaption>
+        </div>
       );
     }
   }

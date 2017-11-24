@@ -14,3 +14,14 @@
   margin-top: 2rem;
   height: 90vh;
 }
+
+.map--with-caption {
+  padding-bottom: 2rem;
+}
+
+.map__caption {
+  margin-top: 0.5rem;
+  text-align: right;
+  font-style: italic;
+  line-height: 1;
+}

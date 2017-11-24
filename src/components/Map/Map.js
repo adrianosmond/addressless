@@ -27,6 +27,16 @@ class Map extends Component {
     }
   }
 
+  caption () {
+    if (this.props.data.caption && !this.props.nocaption) {
+      return (
+        <div className="container">
+          <figcaption className="map__caption">{this.props.data.caption}</figcaption>
+        </div>
+      );
+    }
+  }
+
   setEndPoint(endLatLng) {
     this.setState({
       endPoint: {
@@ -101,7 +111,7 @@ class Map extends Component {
 
   render () {
     return (
-      <div className={`map map--${this.props.data.mapType}`} ref={(el) => {this.container = el;}}>
+      <figure className={`map map--${this.props.data.mapType}` + (this.props.data.caption ? ' map--with-caption' : '')} ref={(el) => {this.container = el;}}>
         <GoogleMapReact
           bootstrapURLKeys={{key: 'AIzaSyBukDmt04LqDkmRpbL340AWRYUyA2cHt2Y'}}
           center={this.state.center.lat ? this.state.center : {lat: -40.9006, lng: 172.8860}}
@@ -125,7 +135,8 @@ class Map extends Component {
             <MapMarker lat={this.state.endPoint.lat} lng={this.state.endPoint.lng} />
             : null
           }</GoogleMapReact>
-      </div>
+        {this.caption()}
+      </figure>
     );
   }
 }

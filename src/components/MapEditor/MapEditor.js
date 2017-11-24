@@ -29,6 +29,10 @@ class MapEditor extends Component {
             </select>
           }
         </label>
+        <label>
+          Caption (optional)
+          <input type="text" className="post-section-editor__input" value={this.props.data.caption} onChange={this.props.changeContents.bind(this, 'caption')} />
+        </label>
       </div>
     );
   }
