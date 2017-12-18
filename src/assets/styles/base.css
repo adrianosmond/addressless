@@ -119,8 +119,6 @@ h4, .h4 {
   }
 }
 
-
-
 p {
   margin-top: 0;
   margin-bottom: 0;
@@ -134,4 +132,8 @@ input,
 textarea {
   padding: 5px;
   font: inherit;
+}
+
+figure {
+  margin: 0;
 }

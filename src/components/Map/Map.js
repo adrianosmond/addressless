@@ -3,7 +3,6 @@ import GoogleMapReact from 'google-map-react';
 import { fitBounds, meters2ScreenPixels } from 'google-map-react/utils';
 import mapOptions from './mapOptions.json';
 import terrainMapOptions from './terrainMapOptions.json';
-import MapMarker from '../../views/MapMarker/MapMarker';
 import './Map.css';
 
 class Map extends Component {
@@ -131,10 +130,7 @@ class Map extends Component {
             this.processData(map);
           } : null}
           yesIWantToUseGoogleMapApiInternals
-        >{this.props.data.mapType === 'homepage' ?
-            <MapMarker lat={this.state.endPoint.lat} lng={this.state.endPoint.lng} />
-            : null
-          }</GoogleMapReact>
+        ></GoogleMapReact>
         {this.caption()}
       </figure>
     );

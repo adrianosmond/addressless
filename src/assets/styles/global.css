@@ -27,6 +27,10 @@
   padding-top: 2rem;
 }
 
+.container--padded-bottom {
+  padding-bottom: 2rem;
+}
+
 .u-spaced-top--half {
   margin-top: 0.5rem;
 }
