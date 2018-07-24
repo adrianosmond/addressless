@@ -1,0 +1,24 @@
+.photo {
+  display: block;
+  position: relative;
+  margin: 2rem 0 0;
+  padding: 0.5rem 0;
+}
+
+.photo--with-caption {
+  padding-top: 2rem;
+}
+
+.photo--no-margin {
+  padding: 0;
+  margin: 0;
+}
+
+.photo__img {
+  display: block;
+  width: 100%;
+}
+
+.photo-caption:before {
+  content: "\2014";
+}

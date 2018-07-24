@@ -1,9 +1,10 @@
 import React from 'react'
 import rehypeReact from 'rehype-react'
 import Helmet from 'react-helmet'
+import Link, { withPrefix } from 'gatsby-link'
 import Map from '../components/map'
 import Photo from '../components/photo'
-import Link, { withPrefix } from 'gatsby-link'
+import Metadata from '../components/metadata'
 import { formatDate } from '../utils/date'
 
 import './blog-post.css'
@@ -31,7 +32,7 @@ export default ({ data }) => {
           </div>
           <div className='post-title-and-date'>
             <div className='container'>
-              <p className="metadata">{formatDate(date)} - {post.frontmatter.location}</p>
+              <Metadata date={date} location={post.frontmatter.location} isPost={true} />
               <h1>{post.frontmatter.title}</h1>
             </div>
           </div>

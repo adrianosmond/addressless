@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
-import { fitBounds, meters2ScreenPixels } from 'google-map-react/utils';
-import mapOptions from './mapOptions.json';
-import terrainMapOptions from './terrainMapOptions.json';
+import GoogleMapReact from 'google-map-react'
+import { fitBounds, meters2ScreenPixels } from 'google-map-react/utils'
+import mapOptions from '../settings/mapOptions.json'
+import terrainMapOptions from '../settings/terrainMapOptions.json'
+import Caption from './caption'
+
+import './map.css'
 
 class Map extends Component {
   state = {
@@ -28,14 +31,6 @@ class Map extends Component {
       lat: 0,
       lng: 0,
     }
-  }
-
-  caption () {
-    return this.props.caption ? (
-      <div className="container">
-        <figcaption className="map__caption">{this.props.caption}</figcaption>
-      </div>
-    ) : null;
   }
 
   setEndPoint(endLatLng) {
@@ -133,7 +128,7 @@ class Map extends Component {
           } : null}
           yesIWantToUseGoogleMapApiInternals
         ></GoogleMapReact>
-        {this.caption()}
+        <Caption caption={this.props.caption} />
       </figure>
     );
   }

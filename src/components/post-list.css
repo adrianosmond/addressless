@@ -1,0 +1,22 @@
+.post-list {
+  padding-left: 0;
+  list-style: none outside none;
+}
+
+.post-list--spaced {
+  margin-top: 2rem;
+}
+
+.post-list__item:not(:first-child) {
+  margin-top: 2rem;
+}
+
+@media (min-width: 600px) {
+  .post-list--spaced {
+    margin-top: 3rem;
+  }
+
+  .post-list__item:not(:first-child) {
+    margin-top: 3rem;
+  }
+}
