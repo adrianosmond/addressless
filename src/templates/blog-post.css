@@ -12,8 +12,8 @@
 
 .post-body p {
   max-width: 52rem; /*calc(800px + 2rem);*/
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -28,6 +28,11 @@
 }
 
 @media (min-width: 600px) {
+  .post-body p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .post-body p:first-child {
     margin-top: 3rem;
     font-size: 1.25em;
