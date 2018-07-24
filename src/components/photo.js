@@ -14,7 +14,7 @@ const Photo = ({ fullwidth, caption, url, alt }) => {
     return renderPhoto(caption, url, alt)
   }
   return (
-    <div className="post-section">
+    <div className="photo-wrapper">
       <div className="container">
         {renderPhoto(caption, url, alt)}
       </div>

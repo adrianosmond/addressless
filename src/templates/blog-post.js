@@ -1,11 +1,10 @@
 import React from 'react'
 import rehypeReact from 'rehype-react'
 import Helmet from 'react-helmet'
-import Link, { withPrefix } from 'gatsby-link'
+import { withPrefix } from 'gatsby-link'
+import Hero from '../components/hero'
 import Map from '../components/map'
 import Photo from '../components/photo'
-import Metadata from '../components/metadata'
-import { formatDate } from '../utils/date'
 
 import './blog-post.css'
 
@@ -21,23 +20,16 @@ const renderAst = new rehypeReact({
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  const { date } = post.frontmatter;
+  const { date, title, headerImg, location } = post.frontmatter;
   return (
     <article className='post'>
-      <Helmet title={`${post.frontmatter.title} - ${data.site.siteMetadata.title}`} />
-      <div className='post-title-holder' style={{backgroundImage: `url(${ withPrefix(post.frontmatter.headerImg) })`}}>
-        <div className='post-top-wrapper'>
-          <div className='container container--padded-top'>
-            <Link to={'/'}>Home</Link> &gt; <Link to={'/posts'}>Posts</Link>
-          </div>
-          <div className='post-title-and-date'>
-            <div className='container'>
-              <Metadata date={date} location={post.frontmatter.location} isPost={true} />
-              <h1>{post.frontmatter.title}</h1>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Helmet title={`${title} - ${data.site.siteMetadata.title}`} />
+      <Hero title={title}
+            img={withPrefix(headerImg)}
+            links={true}
+            date={date}
+            location={location}
+            isPost={true} />
       {
         postBody(renderAst(post.htmlAst))
       }
