@@ -1,133 +1,85 @@
 import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react'
-import { fitBounds, meters2ScreenPixels } from 'google-map-react/utils'
-import mapOptions from '../settings/mapOptions.json'
-import terrainMapOptions from '../settings/terrainMapOptions.json'
+import mapboxgl from 'mapbox-gl';
 import Caption from './caption'
 
 import './map.css'
 
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWRyaWFub3Ntb25kIiwiYSI6ImNqa3pvcTlmYTB0b20zcHMxdGVwdXd3dDgifQ.F1bLhz5g91FlzHnt5_PYIw';
+
+const rem = (width) => {
+  if (width >= 1500) return 20;
+  if (width >= 600) return 18;
+  return 16;
+}
+
 class Map extends Component {
-  state = {
-    center: {},
-    zoom: -1,
-    endPoint: {
-      lat: 0,
-      lng: 0
-    }
-  }
-
-  static defaultProps = {
-    mapstyle: "article",
-    maptype: "terrain"
-  }
-
-  bounds = {
-    nw: {
-      lat: 0,
-      lng: 0,
-    },
-    se: {
-      lat: 0,
-      lng: 0,
-    }
-  }
-
-  setEndPoint(endLatLng) {
-    this.setState({
-      endPoint: {
-        lat: endLatLng[1],
-        lng: endLatLng[0]
-      }
-    })
-  }
-
-  calculateCenterAndZoom(newData) {
-    if (this.container === null) return;
-    if (newData) {
-      this.setState({
-        center: newData.center
-      });
-    }
-
-    const size = {
-      width: this.container.clientWidth,
-      height: this.container.clientHeight
-    };
-
-    const {center, zoom} = fitBounds(this.bounds, size);
-
-    if (this.props.containerHeight) {
-      const mapHeight = meters2ScreenPixels(1400000, center, zoom).h;
-      this.props.containerHeight(mapHeight);
-    }
-
-    this.setState({
-      center,
-      zoom
+  componentDidMount() {
+    const styleUrl = this.props.type==='homepage' ?
+      'mapbox://styles/adrianosmond/cjl6t297y0y862spkzf80gzij?fetch=true' :
+      'mapbox://styles/adrianosmond/cjl629ie90e3j2so0zlblahux';
+    this.map = new mapboxgl.Map({
+      container: this.mapContainer,
+      style: styleUrl,
+      scrollZoom: false,
+      center: [172.8860, -40.9006],
+      zoom: 4,
     });
+
+    if (this.props.route) {
+      this.loadRoute()
+    }
   }
 
-  processData(map) {
-    let minLat = 180;
-    let minLng = 180;
-    let maxLat = -180;
-    let maxLng = -180;
+  loadRoute() {
+    this.map.on('load', () => {
+      const pageWidth = window.innerWidth;
+      const verticalPadding = 2 * rem(pageWidth);
+      const horizontalPadding = ((pageWidth - (52 * rem(pageWidth))) / 2);
+      fetch(this.props.route)
+        .then(r => r.json())
+        .then((data) => {
+          this.map.addLayer({
+            id: `route`,
+            type: 'line',
+            source: {
+              type: 'geojson',
+              data,
+            },
+            layout: {
+              'line-join': 'round',
+              'line-cap': 'round',
+            },
+            paint: {
+              'line-color': 'rgb(173,29,29)',
+              'line-width': 2,
+            },
+          });
 
-    fetch(this.props.route).then(r => r.json())
-    .then(data => {
-      map.data.addGeoJson(data);
-      data.features.forEach(feature => {
-        feature.geometry.coordinates.forEach(latLng => {
-          minLat = Math.min(minLat, latLng[1]);
-          maxLat = Math.max(maxLat, latLng[1]);
-          minLng = Math.min(minLng, latLng[0]);
-          maxLng = Math.max(maxLng, latLng[0]);
+          const bounds = new mapboxgl.LngLatBounds();
+          if (!this.props.type === 'homepage') {
+            data.features.forEach(feature => feature.geometry.coordinates.forEach(bounds.extend.bind(bounds)));
+          } else {
+            bounds.setSouthWest([166.5, -47.0])
+            bounds.setNorthEast([178.5, -34.5])
+          }
+          this.map.fitBounds(bounds, {
+            duration: 0,
+            padding: {
+              top: verticalPadding,
+              right: horizontalPadding,
+              bottom: verticalPadding,
+              left: horizontalPadding
+            },
+            maxZoom: 12.9 // Terrain shading gets disabled at zoom 13
+          });
         });
-      })
-
-      this.bounds = {
-        nw: {
-          lat: maxLat,
-          lng: minLng,
-        },
-        se: {
-          lat: minLat,
-          lng: maxLng,
-        }
-      };
-
-      this.calculateCenterAndZoom();
-
-      if (this.props.type==='homepage') {
-        this.setEndPoint(data.features[0].geometry.coordinates[data.features[0].geometry.coordinates.length-1]);
-      }
     });
   }
 
   render () {
     return (
-      <figure className={`map map--${this.props.type}` + (this.props.caption ? ' map--with-caption' : '')} ref={(el) => {this.container = el;}}>
-        <GoogleMapReact
-          bootstrapURLKeys={{key: 'AIzaSyBukDmt04LqDkmRpbL340AWRYUyA2cHt2Y'}}
-          center={this.state.center.lat ? this.state.center : {lat: -40.9006, lng: 172.8860}}
-          zoom={this.state.zoom > 0 ? this.state.zoom : 5}
-          onChange={this.calculateCenterAndZoom.bind(this)}
-          options={this.props.layer==='terrain'? terrainMapOptions : mapOptions}
-          onGoogleApiLoaded={this.props.route? ({map, maps}) => {
-            let pathColour = '#a8c9ff';
-            if (this.props.layer === 'terrain') {
-              pathColour = '#ff0000';
-            }
-            map.data.setStyle({
-              strokeColor: pathColour,
-              strokeWeight: 1.5,
-              strokeOpacity: 0.9
-            });
-            this.processData(map);
-          } : null}
-          yesIWantToUseGoogleMapApiInternals
-        ></GoogleMapReact>
+      <figure className={`map map--${this.props.type}` + (this.props.caption ? ' map--with-caption' : '')}>
+        <div className="map__map" ref={(el) => {this.mapContainer = el;}}></div>
         <Caption caption={this.props.caption} />
       </figure>
     );
