@@ -15,8 +15,9 @@ const rem = (width) => {
 class Map extends Component {
   componentDidMount() {
     const styleUrl = this.props.type==='homepage' ?
-      'mapbox://styles/adrianosmond/cjl6t297y0y862spkzf80gzij?fetch=true' :
+      'mapbox://styles/adrianosmond/cjl6t297y0y862spkzf80gzij' :
       'mapbox://styles/adrianosmond/cjl629ie90e3j2so0zlblahux';
+
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
       style: styleUrl,
@@ -32,47 +33,54 @@ class Map extends Component {
 
   loadRoute() {
     this.map.on('load', () => {
-      const pageWidth = window.innerWidth;
-      const verticalPadding = 2 * rem(pageWidth);
-      const horizontalPadding = ((pageWidth - (52 * rem(pageWidth))) / 2);
       fetch(this.props.route)
         .then(r => r.json())
-        .then((data) => {
-          this.map.addLayer({
-            id: `route`,
-            type: 'line',
-            source: {
-              type: 'geojson',
-              data,
-            },
-            layout: {
-              'line-join': 'round',
-              'line-cap': 'round',
-            },
-            paint: {
-              'line-color': 'rgb(173,29,29)',
-              'line-width': 2,
-            },
-          });
+        .then(data => this.addGeoJson(data))
+        .then(data => this.setMapBounds(data));
+    });
+  }
 
-          const bounds = new mapboxgl.LngLatBounds();
-          if (!this.props.type === 'homepage') {
-            data.features.forEach(feature => feature.geometry.coordinates.forEach(bounds.extend.bind(bounds)));
-          } else {
-            bounds.setSouthWest([166.5, -47.0])
-            bounds.setNorthEast([178.5, -34.5])
-          }
-          this.map.fitBounds(bounds, {
-            duration: 0,
-            padding: {
-              top: verticalPadding,
-              right: horizontalPadding,
-              bottom: verticalPadding,
-              left: horizontalPadding
-            },
-            maxZoom: 12.9 // Terrain shading gets disabled at zoom 13
-          });
-        });
+  addGeoJson(data) {
+    this.map.addLayer({
+      id: `route`,
+      type: 'line',
+      source: {
+        type: 'geojson',
+        data,
+      },
+      layout: {
+        'line-join': 'round',
+        'line-cap': 'round',
+      },
+      paint: {
+        'line-color': 'rgb(173,29,29)',
+        'line-width': 2,
+      },
+    });
+    return data;
+  }
+
+  setMapBounds(data) {
+    const bounds = new mapboxgl.LngLatBounds();
+    const pageWidth = window.innerWidth;
+    const verticalPadding = 2 * rem(pageWidth);
+    const horizontalPadding = ((pageWidth - (52 * rem(pageWidth))) / 2);
+    if (this.props.type === 'homepage') {
+      // Bounds for the whole of New Zealand
+      bounds.setSouthWest([166.5, -47.0])
+      bounds.setNorthEast([178.5, -34.5])
+    } else {
+      data.features.forEach(feature => feature.geometry.coordinates.forEach(bounds.extend.bind(bounds)));
+    }
+    this.map.fitBounds(bounds, {
+      duration: 0,
+      padding: {
+        top: verticalPadding,
+        right: horizontalPadding,
+        bottom: verticalPadding,
+        left: horizontalPadding
+      },
+      maxZoom: 12.9 // Terrain shading gets disabled at zoom 13
     });
   }
 
