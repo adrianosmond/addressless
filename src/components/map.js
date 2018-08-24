@@ -21,7 +21,7 @@ class Map extends Component {
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
       style: styleUrl,
-      scrollZoom: false,
+      interactive: false,
       center: [172.8860, -40.9006],
       zoom: 4,
     });
@@ -54,7 +54,7 @@ class Map extends Component {
       },
       paint: {
         'line-color': 'rgb(173,29,29)',
-        'line-width': 2,
+        'line-width': 1,
       },
     });
     return data;
@@ -63,12 +63,21 @@ class Map extends Component {
   setMapBounds(data) {
     const bounds = new mapboxgl.LngLatBounds();
     const pageWidth = window.innerWidth;
-    const verticalPadding = 2 * rem(pageWidth);
-    const horizontalPadding = ((pageWidth - (52 * rem(pageWidth))) / 2);
+    const r = rem(pageWidth);
+    const verticalPadding = 2 * r;
+    let horizontalPadding;
+    if (pageWidth < 600) {
+      horizontalPadding = r;
+    } else if (pageWidth < 52 * r) {
+      horizontalPadding = 2 * r;
+    } else {
+      horizontalPadding = (pageWidth - (52 * r)) / 2;
+    }
+      
     if (this.props.type === 'homepage') {
       // Bounds for the whole of New Zealand
-      bounds.setSouthWest([166.5, -47.0])
-      bounds.setNorthEast([178.5, -34.5])
+      bounds.setSouthWest([166, -47.5])
+      bounds.setNorthEast([179, -34.5])
     } else {
       data.features.forEach(feature => feature.geometry.coordinates.forEach(bounds.extend.bind(bounds)));
     }
