@@ -16,4 +16,9 @@
 
 .map__map {
   height: 90vh;
+  outline: 0;
+}
+
+.map__map canvas {
+  outline: 0;
 }

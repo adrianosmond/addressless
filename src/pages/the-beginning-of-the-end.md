@@ -23,7 +23,7 @@ After our months of hiking, the hut experience on the Milford Trail and Mount Co
 
 Sadly, even the leisurely build-up to this walk was filled with mishaps. It was too hot to be in the van but too sandfly-heavy to be outside, so we had to pace around a campsite trying to get our things sorted without standing still at any point. We did the laundry at the campsite but our clothes came out of the dryer suspiciously damp. On our way up to the start of the walk the fridge door opened and eggs rolled out, with Adrian's favourite jacket perfectly positioned to break their fall and catch the egg yolk.
 
-<div><photo url="/img/avalanche-peak-1.jpg" caption="The view east through Arthur's Pass from partway up the Avalanche Peak Track" fullwidth="true"></photo></div>
+<div><photo url="/img/avalanche-peak-1.jpg" caption="The view east through Arthur's Pass from part way up the Avalanche Peak Track" fullwidth="true"></photo></div>
 
 Because of the dark clouds gathering in our minds we didn't pay too much attention to the actual dark coming up towards the peaks when we finally started our walk. The view onto the lakes was stunning to start with, with the rain in the distance only making it more dramatic. When the thunder seemed to be getting closer we got a bit less comfortable. By the time we had reached the tree line clouds were all around us, and we couldn't even see the shelter where we wanted to assess the situation. What we could see was a Belgian man with a resemblance to Jesus who came running down past us. ‘Please don't go further’ he urged us. ‘I have been running for two hours to get down. There is a massive storm coming. You won't be able to see anything. And when you are on the rocks in the rain…’
 

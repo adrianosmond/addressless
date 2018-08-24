@@ -27,17 +27,15 @@ class Map extends Component {
     });
 
     if (this.props.route) {
-      this.loadRoute()
+      this.map.on('load', () => this.loadRoute(this.props.route));
     }
   }
 
-  loadRoute() {
-    this.map.on('load', () => {
-      fetch(this.props.route)
-        .then(r => r.json())
-        .then(data => this.addGeoJson(data))
-        .then(data => this.setMapBounds(data));
-    });
+  loadRoute(route) {
+    fetch(route)
+      .then(r => r.json())
+      .then(data => this.addGeoJson(data))
+      .then(data => this.setMapBounds(data));
   }
 
   addGeoJson(data) {
@@ -53,7 +51,7 @@ class Map extends Component {
         'line-cap': 'round',
       },
       paint: {
-        'line-color': 'rgb(173,29,29)',
+        'line-color': '#ad1d1d',
         'line-width': 1,
       },
     });
@@ -76,8 +74,8 @@ class Map extends Component {
       
     if (this.props.type === 'homepage') {
       // Bounds for the whole of New Zealand
-      bounds.setSouthWest([166, -47.5])
       bounds.setNorthEast([179, -34.5])
+      bounds.setSouthWest([166, -47.5])
     } else {
       data.features.forEach(feature => feature.geometry.coordinates.forEach(bounds.extend.bind(bounds)));
     }
