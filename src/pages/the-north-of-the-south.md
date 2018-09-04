@@ -5,7 +5,7 @@ location: "Marlborough, Nelson and Tasman"
 headerImg: "/img/north-sounds.jpg"
 ---
 
-‘Oh, you'll love the South’ everyone said in the North. ‘It's so different there, it's like a whole different country. It was hard to imagine how it could be different, when the North Island is already so diverse. Purple grass? Two moons? Sheep flying using tiny knitted wings?
+‘Oh, you'll love the South’ everyone said in the North. ‘It's so different there, it's like a whole different country’. It was hard to imagine how it could be different, when the North Island is already so diverse. Purple grass? Two moons? Sheep flying using tiny knitted wings?
 
 From our first explorations, the answer seems to be that the North of the South Island is a lot like the North, but everything just looks a bit more dramatic and wild. Fewer people, smaller villages, even more room for nature. And, tragically, smellier toilets.
 
