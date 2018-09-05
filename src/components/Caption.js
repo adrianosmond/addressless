@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './caption.css'
+import './Caption.css'
 
 const Caption = ({ caption }) => 
   caption ?

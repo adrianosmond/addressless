@@ -1,7 +1,7 @@
 import React from 'react';
 import Caption from './caption'
 
-import './photo.css'
+import './Photo.css'
 
 const renderPhoto = (caption, url, alt) =>
   <figure className={'photo' + (caption ? ' photo--with-caption' : '')}>

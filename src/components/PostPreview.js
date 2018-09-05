@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Metadata from './metadata'
 
-import './post-preview.css'
+import './PostPreview.css'
 
 const PostPreview = ({post}) =>
   <Link to={post.fields.slug} className="post-preview">

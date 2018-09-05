@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Metadata from './metadata'
-import './hero.css'
+import './Hero.css'
 
 const Hero = ({ type, img, links, date, location, isPost, title }) =>
   <div className={`hero${ type ? ` hero--${type}` : '' }`}

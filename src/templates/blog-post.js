@@ -2,9 +2,9 @@ import React from 'react'
 import rehypeReact from 'rehype-react'
 import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby-link'
-import Hero from '../components/hero'
-import Map from '../components/map'
-import Photo from '../components/photo'
+import Hero from '../components/Hero'
+import Map from '../components/Map'
+import Photo from '../components/Photo'
 
 import './blog-post.css'
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import PostPreview from './post-preview'
+import PostPreview from './PostPreview'
 
-import './post-list.css'
+import './PostList.css'
 
 const PostList = ({posts, spaced}) => 
   <ul className={`post-list${ spaced ? ' post-list--spaced' : '' }`}>

@@ -1,8 +1,8 @@
 import React from 'react'
 import Link, { withPrefix } from 'gatsby-link'
-import Hero from '../components/hero'
-import PostList from '../components/post-list'
-import Map from '../components/map'
+import Hero from '../components/Hero'
+import PostList from '../components/PostList'
+import Map from '../components/Map'
 
 export default ({ data }) => {
   return (
