@@ -1,5 +1,5 @@
 import React from 'react';
-import Caption from './caption'
+import Caption from './Caption'
 
 import './Photo.css'
 
