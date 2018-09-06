@@ -347,7 +347,9 @@ class Map extends Component {
             loadedMap={this.state.loadedMap}
             loadingInteractive={this.state.loadingInteractive}
             loadedInteractive={this.state.loadedInteractive}
-            next={() => this.nextStage()} />
+            date={stages[this.state.stage - 1]}
+            next={() => this.nextStage()}
+            animating={this.state.animating} />
           : null }
       </figure>
     );

@@ -1,5 +1,60 @@
 .map-story-controls {
   position: absolute;
-  top: 1em;
-  left: 1em;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgba(0,0,0, 0.75);
+}
+
+.map-story-controls__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.map-story-controls__date {
+  padding-right: 1rem;
+}
+
+.map-story-controls__date--short {
+  display: block;
+  max-width: 5rem;
+}
+
+.map-story-controls__date--full {
+  display: none;
+}
+
+.map-story-controls__button {
+  font: inherit;
+  background-color: rgba(0,0,0,0.75);
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.map-story-controls__button:disabled {
+  opacity: 0.3;
+}
+
+.map-story-controls__button-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #fff;
+}
+
+@media (min-width: 600px) {
+  .map-story-controls {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .map-story-controls__date--short {
+    display: none;
+  }
+
+  .map-story-controls__date--full {
+    display: block;
+  }
 }

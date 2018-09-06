@@ -10,16 +10,19 @@ export const suffix = (dateStr) => {
   return "th"
 }
 
-export const monthDay = (dateStr) => {
+export const monthDay = (dateStr, short = false) => {
   const date = new Date(dateStr);
   const months = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];  
-  return `${months[date.getMonth()]} ${date.getDate()}`
+  return `${months[date.getMonth()].substr(0, short ? 3 : 100)} ${date.getDate()}`
 }
 
 export const year = (dateStr) => new Date(dateStr).getFullYear();
 
 export const formatDate = (dateStr) =>
   <span>{monthDay(dateStr)}<sup>{suffix(dateStr)}</sup>, {year(dateStr)}</span>
+
+export const formatShortDate = (dateStr) =>
+  <span>{monthDay(dateStr, true)}, {year(dateStr)}</span>
