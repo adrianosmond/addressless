@@ -1,8 +1,10 @@
 ---
 title: "Napier: An Art Deco Detour"
-date: "2017-09-27"
+date: "2017-09-26"
 location: "Napier"
 headerImg: "/img/napier.jpg"
+longitude: 176.9186782836914
+latitude: -39.48973458615778
 ---
 
 Our plans to visit Mount Doom had to be put on hold by a storm which, by the size of it and the amount of New Zealand's north island it was affecting, may well have been sent by Sauron to deter us. So we decided the best thing to do would be to head to the one sunny spot on the weather map - Napier.

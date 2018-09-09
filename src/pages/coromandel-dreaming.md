@@ -1,8 +1,10 @@
 ---
 title: "Coromandel Dreaming"
-date: "2017-09-22"
+date: "2017-09-20"
 location: "Coromandel Peninsula"
 headerImg: "/img/van.jpg"
+longitude: 175.7997894287109
+latitude: -36.83456911447563
 ---
 
 We have left our glamorous life in Auckland behind and are now very much on the road. First project: the Coromandel peninsula a few hours away from Auckland.

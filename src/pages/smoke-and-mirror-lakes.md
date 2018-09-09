@@ -1,8 +1,10 @@
 ---
 title: "Smoke and Mirror Lakes"
-date: "2017-10-20"
+date: "2017-10-19"
 location: "Nelson Lakes and the West Coast"
 headerImg: "/img/star-reflections.jpg"
+longitude: 169.82425689697266
+latitude: -43.41751764583171
 ---
 
 The drive down the South Island's West Coast region seems to be notorious amongst Kiwis for two things. It's one of the country's most stunning routes, but also only shows itself infuriatingly rarely. Would we be able to see the peaks reflected in the mirror lakes? Or would it just be cloud?

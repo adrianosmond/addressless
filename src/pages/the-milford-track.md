@@ -1,8 +1,10 @@
 ---
 title: "The Milford Track"
-date: "2017-11-04"
+date: "2017-11-02"
 location: "Fiordland"
 headerImg: "/img/milford-mackinnon-dina.jpg"
+longitude: 167.752590
+latitude: -45.208348
 ---
 
 Last week, we finally reached the only item that had been on our agenda for months: the Milford Track. Four days, three nights, 55 kilometres, two boats, all in one big fjord area.

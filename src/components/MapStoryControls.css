@@ -17,11 +17,12 @@
 
 .map-story-controls__date--short {
   display: block;
-  max-width: 5rem;
+  width: 5rem;
 }
 
 .map-story-controls__date--full {
   display: none;
+  width: 12rem;
 }
 
 .map-story-controls__button {

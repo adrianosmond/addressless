@@ -1,8 +1,10 @@
 ---
 title: "The Terror of Taranaki"
-date: "2017-09-29"
+date: "2017-09-28"
 location: "Mount Taranaki"
 headerImg: "/img/taranaki.jpg"
+longitude: 174.09278869628906
+latitude: -39.268410828801954
 ---
 
 Since we saw a good weather window opening up over Mount Taranaki we decided to pack up, leave the Thirties scenes of Napier behind us and drive across the country for some volcanic hiking.

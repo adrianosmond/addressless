@@ -1,8 +1,10 @@
 ---
 title: "Rocks of Rotorua"
-date: "2017-09-24"
+date: "2017-09-23"
 location: "Rotorua"
 headerImg: "/img/dina-mist.jpg"
+longitude: 176.2529754638672
+latitude: -38.13496164325308
 ---
 
 We drove inland to explore the volcanic region around Rotorua, exchanging sea air for something a lot more eggy.

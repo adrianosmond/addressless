@@ -1,8 +1,10 @@
 ---
 title: "Queen Charlotte Track"
-date: "2017-12-02"
+date: "2017-11-30"
 location: "Marlborough"
 headerImg: "/img/queen-charlotte-track-1.jpg"
+longitude: 174.002224
+latitude: -41.213919
 ---
 
 With a couple of days in Marlborough before a Park Run and Dina wanting a rest from hiking, I decided to head back towards the infamous Mount Stokes by myself, to see if I might be able to see a bit more of the region from the Queen Charlotte Track.

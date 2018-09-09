@@ -1,8 +1,10 @@
 ---
 title: "Doubtful Sound: Certainly Stunning"
-date: "2017-10-28"
+date: "2017-10-27"
 location: "Doubtful Sound"
 headerImg: "/img/doubtful-boat.jpg"
+longitude: 166.84524536132812
+latitude: -45.25168825611765
 ---
 
 We’d reached roughly the halfway point our the trip and you may have noticed that we've been a bit thrifty so far. Thanks to the fact that we’d been to a hotel only once and public toilets and tinned tomatoes had been central to our lives, the gods of Excel told us we were under budget, and this could only mean one thing… Time for some extravagance!

@@ -1,8 +1,10 @@
 ---
 title: "Trekking Tongariro"
-date: "2017-10-05"
+date: "2017-10-04"
 location: "Tongariro"
 headerImg: "/img/tongariro-crossing.jpg"
+longitude: 175.580228
+latitude: -39.272709
 ---
 
 We'd detoured around the north island, waiting for a good weather window in Tongariro National Park for a week and it finally looked like we had one.  So with gear for all weather (including crampons) we headed off to tackle New Zealand's best day hike and Mount Doom.

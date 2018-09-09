@@ -4,7 +4,10 @@ import Hero from '../components/Hero'
 import PostList from '../components/PostList'
 import Map from '../components/Map'
 
+const NUM_POSTS_TO_SHOW = 3;
+
 export default ({ data }) => {
+  const posts = data.allMarkdownRemark.edges
   return (
     <div>
       <Hero title={data.site.siteMetadata.title}
@@ -20,13 +23,14 @@ export default ({ data }) => {
       </div>
       <div className='container container--padded'>
         <h2>What we thought</h2>
-        <PostList posts={data.allMarkdownRemark.edges.map(post => post.node)} spaced={true} />
+        <PostList posts={posts.filter((post, idx) => idx < NUM_POSTS_TO_SHOW)
+          .map(post => post.node)} spaced={true} />
         <Link to={'/posts'}>View all of our posts</Link>
       </div>
       <div className='container container--padded-top'>
         <h2>Where we went</h2>
       </div>
-      <Map type='homepage' route='/route/nz-trip.json' />
+      <Map type='homepage' route='/route/nz-trip.json' posts={posts} />
     </div>
   );
 };
@@ -38,7 +42,7 @@ export const query = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 3) {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
       totalCount
       edges {
         node {
@@ -47,6 +51,9 @@ export const query = graphql`
             title
             date
             location
+            headerImg
+            longitude
+            latitude
           }
           fields {
             slug

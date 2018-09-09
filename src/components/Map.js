@@ -53,14 +53,15 @@ const bespokeMovements = {
   ]
 }
 
-
 class Map extends Component {
   state = {
     loadedMap: false,
     loadingInteractive: false,
     loadedInteractive: false,
+    animating: true,
     stage: 0,
-    mapData: []
+    mapData: [],
+    markers: {}
   }
 
   componentDidMount() {
@@ -156,6 +157,11 @@ class Map extends Component {
       data: makePoint([0, 0])
     });
 
+    const styleTag = document.createElement('link')
+    styleTag.setAttribute('rel', 'stylesheet')
+    styleTag.setAttribute('href', 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css')
+    document.head.appendChild(styleTag);
+
     this.map.addLayer({
       id: 'point',
       source: 'point',
@@ -164,6 +170,26 @@ class Map extends Component {
         'circle-radius': 3,
         'circle-color': `rgb(${LINE_COLOUR})`
       }
+    });
+
+    const markers = {};
+    this.props.posts.forEach(({ node: article }) => {
+      const popup = new mapboxgl.Popup();
+      popup.setHTML(`
+        <a href='${article.fields.slug}' target='_blank' class='map__popup'>
+          <img src='${article.frontmatter.headerImg}' alt='' class='map__popup-thumb'/>
+          <p class='map__popup-title'>${article.frontmatter.title}</p>
+        </a>`)
+      const marker = new mapboxgl.Marker()
+      marker.setLngLat([
+        article.frontmatter.longitude,
+        article.frontmatter.latitude
+      ])
+      marker.setPopup(popup)
+      markers[stages.indexOf(article.frontmatter.date)] = marker
+    });
+    this.setState({
+      markers
     });
 
     const mapData = []
@@ -257,9 +283,9 @@ class Map extends Component {
       this.setState({
         animating: false
       });
-      // if (this.markers[idx]) {
-      //   this.markers[idx].addTo(this.map);
-      // }
+      if (this.state.markers[idx]) {
+        this.state.markers[idx].addTo(this.map);
+      }
     }
   }
 

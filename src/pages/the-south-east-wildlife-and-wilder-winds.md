@@ -3,6 +3,8 @@ title: "The South-East: Wildlife and Wilder Winds"
 date: "2017-11-10"
 location: "Catlins Coast"
 headerImg: "/img/waipapa-point.jpg"
+longitude: 170.88546752929688
+latitude: -45.214454707453534
 ---
 
 With 10 days rest between multi-day hikes in the South Island's scenic south west, we headed to a part of the country that's more associated with seals and Scots than sightseers and sandflies.

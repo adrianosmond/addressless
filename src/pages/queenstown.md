@@ -1,8 +1,10 @@
 ---
 title: "Queenstown"
-date: "2017-11-20"
+date: "2017-11-18"
 location: "Queenstown"
 headerImg: "/img/queenstown-from-above.jpg"
+longitude: 168.662643
+latitude: -45.031162
 ---
 
 We had heard a lot about Queenstown before going there, mainly that it is touristy, busy, and full of adventure sports. We were a bit sceptical but we ended up going there a couple of times due to its centrality in the South of the South Island. Would it end up being a convenient stop for groceries and laundry for us, or something more?

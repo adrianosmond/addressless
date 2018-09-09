@@ -1,8 +1,10 @@
 ---
 title: "Finding the Wanaka"
-date: "2017-10-24"
+date: "2017-10-23"
 location: "Wanaka"
 headerImg: "/img/wanaka-tree.jpg"
+longitude: 169.132095
+latitude: -44.703182
 ---
 
 We left the West Coast and its evil sandflies behind for an impossibly scenic ride to Wanaka, taking nothing with us but memories and some very itchy bites. Wanaka is a resort town on a lake that everyone seems to fall in love with, and we were ready to be swept off our feet.

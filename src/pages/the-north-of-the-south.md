@@ -1,8 +1,10 @@
 ---
 title: "The North of the South"
-date: "2017-10-13"
+date: "2017-10-12"
 location: "Marlborough, Nelson and Tasman"
 headerImg: "/img/north-sounds.jpg"
+longitude: 173.0094337463379
+latitude: -41.00620040290916
 ---
 
 ‘Oh, you'll love the South’ everyone said in the North. ‘It's so different there, it's like a whole different country’. It was hard to imagine how it could be different, when the North Island is already so diverse. Purple grass? Two moons? Sheep flying using tiny knitted wings?

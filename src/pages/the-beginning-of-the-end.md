@@ -1,8 +1,10 @@
 ---
 title: "The Beginning of the End"
-date: "2017-11-30"
+date: "2017-11-26"
 location: "Christchurch, Arthur's Pass & Nelson Lakes"
 headerImg: "/img/avalanche-peak-2.jpg"
+longitude: 171.5686798095703
+latitude: -42.950894358455486
 ---
 
 As we entered the final couple of weeks of our trip, we had done most of the things that had been at the top of our list. This gave us the luxury of being able to do some things that we hadn't originally thought we'd be able to fit in.

@@ -1,8 +1,10 @@
 ---
 title: "Wellington: Wetter and Weta"
-date: "2017-10-09"
+date: "2017-10-07"
 location: "Wellington"
 headerImg: "/img/te-papa.jpg"
+longitude: 174.77806091308594
+latitude: -41.271226783290565
 ---
 
 Having spent the last four or so years in London, we didn't think navigating the cities of New Zealand would be a problem. But a few weeks of camper life was enough to make us feel pretty overwhelmed when we drove into Wellington.

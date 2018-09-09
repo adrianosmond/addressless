@@ -1,8 +1,10 @@
 ---
 title: "Taupo: A town so central we went there twice"
-date: "2017-10-01"
+date: "2017-09-29"
 location: "Taupo"
 headerImg: "/img/taupo.jpg"
+longitude: 176.0782241821289
+latitude: -38.69354912220921
 ---
 
 At the end of our several hundred kilometre detour around some of the slightly lesser travelled parts of the north island, we found ourselves back in Taupo, partly to do our second park run and partly to wait for a weather window to allow us to finally enter Mordor.

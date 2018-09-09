@@ -1,8 +1,10 @@
 ---
 title: "Starry Nights and Supreme Heights"
-date: "2017-11-24"
+date: "2017-11-22"
 location: "Tekapo and Mount Cook"
 headerImg: "/img/mueller-stars.jpg"
+longitude: 170.09342193603516
+latitude: -43.71863648031317
 ---
 
 With 3 weeks left of our journey we left Queenstown in search of bigger things. The road towards Christchurch is famous for giving access to New Zealand's tallest mountain and views of distant things are even bigger than Mount Cook.

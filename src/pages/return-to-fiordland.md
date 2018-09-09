@@ -1,8 +1,10 @@
 ---
 title: "Return to Fiordland"
-date: "2017-11-17"
+date: "2017-11-16"
 location: "Fiordland National Park"
 headerImg: "/img/milford-mitre-peak.jpg"
+longitude: 168.125672
+latitude: -44.967569
 ---
 
 After a detour around the south, the weather looked to have improved in the west again so it was time to head back to Fiordland. Another of New Zealand's ‘Great Walks’ and a second view of Milford Sound, hopefully in the sun this time, were on the agenda.

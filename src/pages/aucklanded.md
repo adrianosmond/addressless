@@ -1,8 +1,10 @@
 ---
 title: "Aucklanded"
-date: "2017-09-19"
+date: "2017-09-18"
 location: "Auckland"
 headerImg: "/img/auckland.jpg"
+longitude: 174.700813293457
+latitude: -36.81340773057336
 ---
 
 ‘For sparkling cities you don't have to go to New Zealand’ said our blunt Dutch guidebook. ‘It's not really a city’ said our friends. ‘Rain’ was the forecast for the first few days after we landed. Our expectations were not sky high, but from what we could see, Auckland is not a bad place to be.

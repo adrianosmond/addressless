@@ -5,7 +5,6 @@ import './MapStoryControls.css'
 
 const StartScreen = ({ loading, start }) =>
   <div>
-    <p>Timeline</p>
     <button className="map-story-controls__button" onClick={start} disabled={loading}>
       <svg className="map-story-controls__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M8 5v14l11-7z"/>

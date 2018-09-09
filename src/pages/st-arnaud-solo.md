@@ -1,8 +1,10 @@
 ---
 title: "St Arnaud Solo"
-date: "2017-10-15"
+date: "2017-10-14"
 location: "Nelson Lakes National Park"
 headerImg: "/img/st-arnaud-sign.jpg"
+longitude: 172.83897399902344
+latitude: -41.80228666113524
 ---
 
 The St. Arnaud Range Track, when described to us by the friendly staff at the Nelson Lakes National Park Visitor Centre, sounded too like Mount Stokes for Dina. With that disappointment fresh in her mind, she decided to leave me to go gallivanting up another mountain on my own.
