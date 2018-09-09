@@ -14,6 +14,6 @@ We hadn't originally planned to visit Napier, a small and peaceful city on the P
 
 After coffee and a doughnut that you can inject your own filling into at a place recommended to us by Steve and Ana (it's run by Steve's uncle) we embarked upon a tour of the town. It was quite nice how quiet it was - we only saw a couple of other tourists, presumably the fact that it's not on the main route between Auckland and Wellington makes it a bit more of a hassle for most.
 
-<div><photo url="/img/mapier-street.jpg"></photo></div
+<div><photo url="/img/napier-street.jpg"></photo></div
 
 The weather held up as promised, and camping next to the beach allowed Dina to touch the Pacific Ocean for the first time in her life. Unfortunately it was way too cold for a swim. And as for what's next on the itinerary... Our sunshine senses tell us we've got a window at the notoriously rainy Mount Taranaki - a dormant volcano that couldn't look more like how a child would draw a mountain if it tried.
