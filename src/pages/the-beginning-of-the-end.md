@@ -3,6 +3,7 @@ title: "The Beginning of the End"
 date: "2017-11-26"
 location: "Christchurch, Arthur's Pass & Nelson Lakes"
 headerImg: "/img/avalanche-peak-2.jpg"
+thumb: "/img/avalanche-peak-2-thumb.jpg"
 longitude: 171.5686798095703
 latitude: -42.950894358455486
 ---

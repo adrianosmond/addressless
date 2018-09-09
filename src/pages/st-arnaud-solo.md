@@ -3,6 +3,7 @@ title: "St Arnaud Solo"
 date: "2017-10-14"
 location: "Nelson Lakes National Park"
 headerImg: "/img/st-arnaud-sign.jpg"
+thumb: "/img/st-arnaud-sign-thumb.jpg"
 longitude: 172.83897399902344
 latitude: -41.80228666113524
 ---

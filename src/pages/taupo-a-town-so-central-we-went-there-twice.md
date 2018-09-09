@@ -3,6 +3,7 @@ title: "Taupo: A town so central we went there twice"
 date: "2017-09-29"
 location: "Taupo"
 headerImg: "/img/taupo.jpg"
+thumb: "/img/taupo-thumb.jpg"
 longitude: 176.0782241821289
 latitude: -38.69354912220921
 ---

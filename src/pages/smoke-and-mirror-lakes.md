@@ -3,6 +3,7 @@ title: "Smoke and Mirror Lakes"
 date: "2017-10-19"
 location: "Nelson Lakes and the West Coast"
 headerImg: "/img/star-reflections.jpg"
+thumb: "/img/star-reflections-thumb.jpg"
 longitude: 169.82425689697266
 latitude: -43.41751764583171
 ---

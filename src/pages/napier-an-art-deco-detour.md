@@ -3,6 +3,7 @@ title: "Napier: An Art Deco Detour"
 date: "2017-09-26"
 location: "Napier"
 headerImg: "/img/napier.jpg"
+thumb: "/img/napier-thumb.jpg"
 longitude: 176.9186782836914
 latitude: -39.48973458615778
 ---

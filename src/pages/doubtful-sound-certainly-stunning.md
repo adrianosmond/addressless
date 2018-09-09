@@ -3,6 +3,7 @@ title: "Doubtful Sound: Certainly Stunning"
 date: "2017-10-27"
 location: "Doubtful Sound"
 headerImg: "/img/doubtful-boat.jpg"
+thumb: "/img/doubtful-boat-thumb.jpg"
 longitude: 166.84524536132812
 latitude: -45.25168825611765
 ---

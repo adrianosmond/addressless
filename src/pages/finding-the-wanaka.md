@@ -3,6 +3,7 @@ title: "Finding the Wanaka"
 date: "2017-10-23"
 location: "Wanaka"
 headerImg: "/img/wanaka-tree.jpg"
+thumb: "/img/wanaka-tree-thumb.jpg"
 longitude: 169.132095
 latitude: -44.703182
 ---

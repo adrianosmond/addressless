@@ -3,6 +3,7 @@ title: "Aucklanded"
 date: "2017-09-18"
 location: "Auckland"
 headerImg: "/img/auckland.jpg"
+thumb: "/img/auckland-thumb.jpg"
 longitude: 174.700813293457
 latitude: -36.81340773057336
 ---

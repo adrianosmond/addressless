@@ -3,6 +3,7 @@ title: "Starry Nights and Supreme Heights"
 date: "2017-11-22"
 location: "Tekapo and Mount Cook"
 headerImg: "/img/mueller-stars.jpg"
+thumb: "/img/mueller-stars-thumb.jpg"
 longitude: 170.09342193603516
 latitude: -43.71863648031317
 ---

@@ -3,6 +3,7 @@ title: "The South-East: Wildlife and Wilder Winds"
 date: "2017-11-10"
 location: "Catlins Coast"
 headerImg: "/img/waipapa-point.jpg"
+thumb: "/img/waipapa-point-thumb.jpg"
 longitude: 170.88546752929688
 latitude: -45.214454707453534
 ---

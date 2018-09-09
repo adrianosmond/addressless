@@ -187,7 +187,7 @@ class Map extends Component {
       const popup = new mapboxgl.Popup();
       popup.setHTML(`
         <a href='${article.fields.slug}' target='_blank' class='map__popup'>
-          <img src='${article.frontmatter.headerImg}' alt='' class='map__popup-thumb'/>
+          <img src='${article.frontmatter.thumb}' alt='' class='map__popup-thumb'/>
           <p class='map__popup-title'>${article.frontmatter.title}</p>
         </a>`)
       const marker = new mapboxgl.Marker()

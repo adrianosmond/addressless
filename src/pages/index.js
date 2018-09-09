@@ -51,7 +51,7 @@ export const query = graphql`
             title
             date
             location
-            headerImg
+            thumb
             longitude
             latitude
           }

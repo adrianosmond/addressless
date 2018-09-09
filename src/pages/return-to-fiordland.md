@@ -3,6 +3,7 @@ title: "Return to Fiordland"
 date: "2017-11-16"
 location: "Fiordland National Park"
 headerImg: "/img/milford-mitre-peak.jpg"
+thumb: "/img/milford-mitre-peak-thumb.jpg"
 longitude: 168.125672
 latitude: -44.967569
 ---

@@ -3,6 +3,7 @@ title: "The North of the South"
 date: "2017-10-12"
 location: "Marlborough, Nelson and Tasman"
 headerImg: "/img/north-sounds.jpg"
+thumb: "/img/north-sounds-thumb.jpg"
 longitude: 173.0094337463379
 latitude: -41.00620040290916
 ---

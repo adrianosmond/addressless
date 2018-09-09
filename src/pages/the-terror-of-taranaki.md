@@ -3,6 +3,7 @@ title: "The Terror of Taranaki"
 date: "2017-09-28"
 location: "Mount Taranaki"
 headerImg: "/img/taranaki.jpg"
+thumb: "/img/taranaki-thumb.jpg"
 longitude: 174.09278869628906
 latitude: -39.268410828801954
 ---

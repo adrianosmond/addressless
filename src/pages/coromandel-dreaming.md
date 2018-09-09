@@ -3,6 +3,7 @@ title: "Coromandel Dreaming"
 date: "2017-09-20"
 location: "Coromandel Peninsula"
 headerImg: "/img/van.jpg"
+thumb: "/img/van-thumb.jpg"
 longitude: 175.7997894287109
 latitude: -36.83456911447563
 ---

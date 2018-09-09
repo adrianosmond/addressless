@@ -3,6 +3,7 @@ title: "Queenstown"
 date: "2017-11-18"
 location: "Queenstown"
 headerImg: "/img/queenstown-from-above.jpg"
+thumb: "/img/queenstown-from-above-thumb.jpg"
 longitude: 168.662643
 latitude: -45.031162
 ---

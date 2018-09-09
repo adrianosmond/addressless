@@ -3,6 +3,7 @@ title: "Queen Charlotte Track"
 date: "2017-11-30"
 location: "Marlborough"
 headerImg: "/img/queen-charlotte-track-1.jpg"
+thumb: "/img/queen-charlotte-track-1-thumb.jpg"
 longitude: 174.002224
 latitude: -41.213919
 ---

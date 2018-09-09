@@ -3,6 +3,7 @@ title: "Wellington: Wetter and Weta"
 date: "2017-10-07"
 location: "Wellington"
 headerImg: "/img/te-papa.jpg"
+thumb: "/img/te-papa-thumb.jpg"
 longitude: 174.77806091308594
 latitude: -41.271226783290565
 ---

@@ -3,6 +3,7 @@ title: "The Milford Track"
 date: "2017-11-02"
 location: "Fiordland"
 headerImg: "/img/milford-mackinnon-dina.jpg"
+thumb: "/img/milford-mackinnon-dina-thumb.jpg"
 longitude: 167.752590
 latitude: -45.208348
 ---

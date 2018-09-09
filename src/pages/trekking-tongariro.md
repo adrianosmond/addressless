@@ -3,6 +3,7 @@ title: "Trekking Tongariro"
 date: "2017-10-04"
 location: "Tongariro"
 headerImg: "/img/tongariro-crossing.jpg"
+thumb: "/img/tongariro-crossing-thumb.jpg"
 longitude: 175.580228
 latitude: -39.272709
 ---
