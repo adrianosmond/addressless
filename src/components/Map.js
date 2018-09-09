@@ -4,16 +4,11 @@ import Caption from './Caption'
 import MapStoryControls from './MapStoryControls'
 
 import { makePoint, makeStages, getBounds, getCoords, makeEmptyJsonLine, distance } from '../utils/map';
+import { rem } from '../utils/typography';
 
 import './Map.css'
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWRyaWFub3Ntb25kIiwiYSI6ImNqa3pvcTlmYTB0b20zcHMxdGVwdXd3dDgifQ.F1bLhz5g91FlzHnt5_PYIw';
-
-const rem = (width) => {
-  if (width >= 1500) return 20;
-  if (width >= 600) return 18;
-  return 16;
-}
 
 let avgFrameTime = 80;
 const LINE_COLOUR = '173,29,29';
@@ -97,7 +92,7 @@ class Map extends Component {
 
   addGeoJson(data) {
     this.map.addLayer({
-      id: `route`,
+      id: 'route',
       type: 'line',
       source: {
         type: 'geojson',
@@ -108,7 +103,7 @@ class Map extends Component {
         'line-cap': 'round',
       },
       paint: {
-        'line-color': '#ad1d1d',
+        'line-color': `rgb(${LINE_COLOUR})`,
         'line-width': 1,
       },
     });
@@ -150,6 +145,19 @@ class Map extends Component {
 
   startInteractive() {
     this.setState({ loadingInteractive: true });
+    this.setupMap();
+    this.prepareMarkers();
+    this.loadMapData()
+      .then(mapData => {
+        this.setState({
+          loadedInteractive: true,
+          mapData
+        });
+        requestAnimationFrame(() => this.startTrip())
+      });
+  }
+
+  setupMap() {
     this.map.setLayoutProperty('route', 'visibility', 'none');
     this.map.setPaintProperty('water', 'fill-color', '#90aac1');
     this.map.addSource('point', {
@@ -171,7 +179,9 @@ class Map extends Component {
         'circle-color': `rgb(${LINE_COLOUR})`
       }
     });
+  }
 
+  prepareMarkers() {
     const markers = {};
     this.props.posts.forEach(({ node: article }) => {
       const popup = new mapboxgl.Popup();
@@ -191,37 +201,34 @@ class Map extends Component {
     this.setState({
       markers
     });
+  }
 
+  loadMapData() {
     const mapData = []
-
-    Promise.all(stages.map(date => fetch(`/route/trip/${date}.json`).then(r => r.json())))
+    return Promise.all(stages.map(date => fetch(`/route/trip/${date}.json`).then(r => r.json())))
       .then(allData => {
         allData.forEach((data, idx) => {
-            this.map.addLayer({
-              id: `segment-${idx}`,
-              type: 'line',
-              source: {
-                type: 'geojson',
-                data
-              },
-              layout: {
-                'line-join': 'round',
-                'line-cap': 'round',
-                'visibility': 'none'
-              },
-              paint: {
-                'line-color': `rgb(${LINE_COLOUR})`,
-                'line-width': 1.5,
-              },
-            });
-            mapData[idx] = data;
-          })
+          this.map.addLayer({
+            id: `segment-${idx}`,
+            type: 'line',
+            source: {
+              type: 'geojson',
+              data
+            },
+            layout: {
+              'line-join': 'round',
+              'line-cap': 'round',
+              'visibility': 'none'
+            },
+            paint: {
+              'line-color': `rgb(${LINE_COLOUR})`,
+              'line-width': 1.5,
+            },
+          });
+          mapData[idx] = data;
+        })
 
-        this.setState({
-          loadedInteractive: true,
-          mapData
-        });
-        requestAnimationFrame(() => this.startTrip())
+        return mapData;
       })
   }
 
