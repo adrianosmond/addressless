@@ -56,9 +56,5 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
         ],
       }
     })
-    // config.loader("null", {
-    //   test: /mapbox-gl/,
-    //   loader: "null-loader",
-    // });
   }
 };

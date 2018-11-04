@@ -5,9 +5,10 @@ import Hero from '../components/Hero'
 import PostList from '../components/PostList'
 import Map from '../components/Map'
 
-import '../css/reset.css';
-import '../css/base.css';
-import '../css/global.css';
+import '../css/reset.css'
+import '../css/base.css'
+import '../css/global.css'
+import './blog-post.css'
 
 const NUM_POSTS_TO_SHOW = 3;
 

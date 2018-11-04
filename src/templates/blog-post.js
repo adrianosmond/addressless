@@ -6,9 +6,9 @@ import Hero from '../components/Hero'
 import Map from '../components/Map'
 import Photo from '../components/Photo'
 
-import '../css/reset.css';
-import '../css/base.css';
-import '../css/global.css';
+import '../css/reset.css'
+import '../css/base.css'
+import '../css/global.css'
 import './blog-post.css'
 
 const postBody = C => <div className='post-body'>{C.props.children}</div>
