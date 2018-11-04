@@ -1,8 +1,13 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Link, { withPrefix } from 'gatsby-link'
 import Hero from '../components/Hero'
 import PostList from '../components/PostList'
 import Map from '../components/Map'
+
+import '../css/reset.css';
+import '../css/base.css';
+import '../css/global.css';
 
 const NUM_POSTS_TO_SHOW = 3;
 
@@ -10,6 +15,7 @@ export default ({ data }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <div>
+      <Helmet title={data.site.siteMetadata.title} />
       <Hero title={data.site.siteMetadata.title}
             img={withPrefix('/img/home.jpg')}
             type='home' />
