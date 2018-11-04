@@ -44,11 +44,21 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   })
 };
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
   if (stage === "build-html") {
-    config.loader("null", {
-      test: /mapbox-gl/,
-      loader: "null-loader",
-    });
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /mapbox-gl/,
+            use: ['null-loader']
+          },
+        ],
+      }
+    })
+    // config.loader("null", {
+    //   test: /mapbox-gl/,
+    //   loader: "null-loader",
+    // });
   }
 };
