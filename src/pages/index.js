@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link, { withPrefix } from 'gatsby-link'
+import { graphql } from 'gatsby'
 import Hero from '../components/Hero'
 import PostList from '../components/PostList'
 import Map from '../components/Map'
