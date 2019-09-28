@@ -27,6 +27,7 @@ export default ({ data }) => {
   const { date, title, headerImg, location } = post.frontmatter;
   const postTitle = `${title} - ${data.site.siteMetadata.title}`;
   const imgURL = withPrefix(headerImg);
+  const siteURL = data.site.siteMetadata.url;
   return (
     <article className="post">
       <Helmet>
@@ -34,7 +35,7 @@ export default ({ data }) => {
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={postTitle} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={`//addressless.co.uk${imgURL}`} />
+        <meta property="og:image" content={`${siteURL}${imgURL}`} />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_GB" />
       </Helmet>
@@ -56,6 +57,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        url
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

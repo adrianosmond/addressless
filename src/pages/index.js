@@ -1,44 +1,53 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Link, { withPrefix } from 'gatsby-link'
-import { graphql } from 'gatsby'
-import Hero from '../components/Hero'
-import PostList from '../components/PostList'
-import Map from '../components/Map'
+import React from "react";
+import Helmet from "react-helmet";
+import Link, { withPrefix } from "gatsby-link";
+import { graphql } from "gatsby";
+import Hero from "../components/Hero";
+import PostList from "../components/PostList";
+import Map from "../components/Map";
 
-import '../css/reset.css'
-import '../css/base.css'
-import '../css/global.css'
-import '../templates/blog-post.css'
+import "../css/reset.css";
+import "../css/base.css";
+import "../css/global.css";
+import "../templates/blog-post.css";
 
 const NUM_POSTS_TO_SHOW = 3;
 
 export default ({ data }) => {
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allMarkdownRemark.edges;
+  const title = data.site.siteMetadata.title;
+  const siteURL = data.site.siteMetadata.url;
+  const siteDescription = data.site.siteMetadata.description;
+  const imgURL = withPrefix("/img/home.jpg");
   return (
     <div>
-      <Helmet title={data.site.siteMetadata.title} />
-      <Hero title={data.site.siteMetadata.title}
-            img={withPrefix('/img/home.jpg')}
-            type='home' />
-      <div className='post-body container--padded-bottom'>
-        <p>
-          Hi there! We're Adrian and Dina. Two people who decided that the best way to get
-          from London to Amsterdam was via New Zealand. On this site we documented more
-          examples of our excellent sense of direction as we exchanged the Underground for
-          a campervan, deadlines for path signs and bills for Bilbo.
-        </p>
+      <Helmet>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={siteDescription} />
+        <meta property="og:url" content={siteURL} />
+        <meta property="og:image" content={`${siteURL}${imgURL}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB" />
+      </Helmet>
+      <Hero title={title} img={imgURL} type="home" />
+      <div className="post-body container--padded-bottom">
+        <p>{siteDescription}</p>
       </div>
-      <div className='container container--padded'>
+      <div className="container container--padded">
         <h2>What we thought</h2>
-        <PostList posts={posts.filter((post, idx) => idx < NUM_POSTS_TO_SHOW)
-          .map(post => post.node)} spaced={true} />
-        <Link to={'/posts'}>View all of our posts</Link>
+        <PostList
+          posts={posts
+            .filter((post, idx) => idx < NUM_POSTS_TO_SHOW)
+            .map(post => post.node)}
+          spaced={true}
+        />
+        <Link to={"/posts"}>View all of our posts</Link>
       </div>
-      <div className='container container--padded-top'>
+      <div className="container container--padded-top">
         <h2>Where we went</h2>
       </div>
-      <Map type='homepage' route='/route/nz-trip.json' posts={posts} />
+      <Map type="homepage" route="/route/nz-trip.json" posts={posts} />
     </div>
   );
 };
@@ -48,9 +57,11 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        url
+        description
       }
     }
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {
