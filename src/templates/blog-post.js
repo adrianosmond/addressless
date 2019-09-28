@@ -32,9 +32,9 @@ export default ({ data }) => {
       <Helmet>
         <title>{postTitle}</title>
         <meta name="description" content={post.excerpt} />
-        <meta name="og:title" content={postTitle} />
-        <meta name="og:description" content={post.excerpt} />
-        <meta name="og:image" content={`http://addressless.co.uk${imgURL}`} />
+        <meta property="og:title" content={postTitle} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={`//addressless.co.uk${imgURL}`} />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_GB" />
       </Helmet>
