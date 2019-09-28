@@ -1,45 +1,55 @@
-import React from 'react'
-import rehypeReact from 'rehype-react'
-import Helmet from 'react-helmet'
-import { withPrefix } from 'gatsby-link'
-import { graphql } from 'gatsby'
-import Hero from '../components/Hero'
-import Map from '../components/Map'
-import Photo from '../components/Photo'
+import React from "react";
+import rehypeReact from "rehype-react";
+import Helmet from "react-helmet";
+import { withPrefix } from "gatsby-link";
+import { graphql } from "gatsby";
+import Hero from "../components/Hero";
+import Map from "../components/Map";
+import Photo from "../components/Photo";
 
-import '../css/reset.css'
-import '../css/base.css'
-import '../css/global.css'
-import './blog-post.css'
+import "../css/reset.css";
+import "../css/base.css";
+import "../css/global.css";
+import "./blog-post.css";
 
-const postBody = C => <div className='post-body'>{C.props.children}</div>
+const postBody = C => <div className="post-body">{C.props.children}</div>;
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { 
-    "map": Map,
-    "photo": Photo
-  },
-}).Compiler
+  components: {
+    map: Map,
+    photo: Photo
+  }
+}).Compiler;
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
   const { date, title, headerImg, location } = post.frontmatter;
+  const postTitle = `${title} - ${data.site.siteMetadata.title}`;
+  const imgURL = withPrefix(headerImg);
   return (
-    <article className='post'>
-      <Helmet title={`${title} - ${data.site.siteMetadata.title}`} />
-      <Hero title={title}
-            img={withPrefix(headerImg)}
-            links={true}
-            date={date}
-            location={location}
-            isPost={true} />
-      {
-        postBody(renderAst(post.htmlAst))
-      }
+    <article className="post">
+      <Helmet>
+        <title>{postTitle}</title>
+        <meta name="description" content={post.excerpt} />
+        <meta name="og:title" content={postTitle} />
+        <meta name="og:description" content={post.excerpt} />
+        <meta name="og:image" content={`http://addressless.co.uk${imgURL}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="en_GB" />
+      </Helmet>
+      <Hero
+        title={title}
+        img={imgURL}
+        links={true}
+        date={date}
+        location={location}
+        isPost={true}
+      />
+      {postBody(renderAst(post.htmlAst))}
     </article>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
@@ -56,6 +66,7 @@ export const query = graphql`
         location
         headerImg
       }
+      excerpt
     }
   }
 `;
